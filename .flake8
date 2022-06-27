@@ -8,11 +8,12 @@ exclude=
     # unworthy time & CPU consomption
     .gitignore,
     .git,
+    .env
     # no needs to go thru \env\site-packages\
-    env/
+    ENV/
   
     # There's no value in checking cache directories
     __pycache__,
-    # django migrations
-    ./authentication/migrations/
-    ./review/migrations/
+    # django migrations & other tests
+    */migrations/*
+    */tests/*
