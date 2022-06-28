@@ -13,14 +13,19 @@ def get_sentinel_user():
 
 
 class Client(User):
+    phone_number = RegexValidator(regex=r"^\+?1?\d{8,15}$", message=cts.PHONE_NOT_VALID)
     is_prospect = models.BooleanField(
         default=True,
         blank=False,
         null=False,
     )
     company_name = models.CharField(max_length=128, blank=False, null=False)
-    company_phone = RegexValidator(regex=r"^\+?1?\d{8,15}$", message=cts.PHONE_NOT_VALID)
-    company_mobile = RegexValidator(regex=r"^\+?1?\d{8,15}$", message=cts.PHONE_NOT_VALID)
+    company_phone = models.CharField(validators=[phone_number], max_length=16, blank=True)
+    company_mobile = models.CharField(
+        validators=[phone_number],
+        max_length=16,
+        blank=True,
+    )
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     sale_contact = models.ForeignKey(
