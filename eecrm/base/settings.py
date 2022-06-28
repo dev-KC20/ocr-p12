@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
-from decouple import config, Csv
 from datetime import timedelta
+from pathlib import Path
+
+from decouple import Csv, config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "users",
-    # "api",
+    "api",
 ]
 
 MIDDLEWARE = [
@@ -92,10 +93,6 @@ DATABASES = {
         "HOST": config("PG_HOST"),
         "PORT": "5432",
     }
-        # "NAME": "eecrm",
-        # "USER": "admin-oc",
-        # "PASSWORD": "oc-password1",
-        # "HOST": "localhost",
 }
 
 # Password validation
