@@ -2,7 +2,6 @@ import base.constants as cts
 from django.contrib.auth import get_user_model
 from django.core.validators import RegexValidator
 from django.db import models
-from users.models import Employee
 
 User = get_user_model()
 
@@ -26,10 +25,10 @@ class Client(User):
         max_length=16,
         blank=True,
     )
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now=True)
+    # date_created = models.DateTimeField(auto_now_add=True)
+    # date_updated = models.DateTimeField(auto_now=True)
     sale_contact = models.ForeignKey(
-        Employee,
+        User,
         related_name="client_salesman",
         on_delete=models.PROTECT,
     )
@@ -47,7 +46,7 @@ class Contract(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     sale_contact = models.ForeignKey(
-        Employee,
+        User,
         related_name="contract_salesman",
         on_delete=models.PROTECT,
     )
@@ -83,7 +82,7 @@ class Event(models.Model):
     date_updated = models.DateTimeField(auto_now=True)
 
     support_contact = models.ForeignKey(
-        Employee,
+        User,
         related_name="event_manager",
         on_delete=models.PROTECT,
     )

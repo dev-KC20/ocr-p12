@@ -44,7 +44,7 @@ class EmployeeRole(BasePermission):
             client_contact = Client.objects.get(id=current_client_id).value("sale_contact")
         print("client_contact", client_contact)
         # get the request user department
-        user_employee = Employee.objects.get(id == request.user)
+        user_employee = User.objects.get(id == request.user)
         user_role = user_employee.department
         print("user ", user_employee, " dept: ", user_role)
 

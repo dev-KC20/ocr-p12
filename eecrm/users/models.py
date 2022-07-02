@@ -3,15 +3,13 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    pass
-
-
-class Employee(User):
-
+    # add a department attribute used for employees
+    EXTERNAL = "E"
     SALES = "S"
     SUPPORT = "A"
     MANAGEMENT = "M"
     EMPLOYEEE_DEPARTMENT = [
+        (EXTERNAL, "Partenaire"),
         (SALES, "Commercial"),
         (SUPPORT, "Assistance"),
         (MANAGEMENT, "Gestion"),
@@ -22,24 +20,8 @@ class Employee(User):
         choices=EMPLOYEEE_DEPARTMENT,
         default=SALES,
     )
+    
+
+# account register history
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
-
-    def save(self, *args, **kwargs):
-        """ The management employee need more rights than others as per specifications
-            'Créer, mettre à jour et supprimer des utilisateurs dans le système CRM.
-             Afficher et modifier toutes les données dans le système CRM.'
-        """
-        employee = super(Employee, self)
-        if self.department == self.MANAGEMENT:
-            self.is_staff = True
-            self.is_superuser = True
-        else:
-            self.is_staff = False
-            self.is_superuser = False
-        employee.is_active = True    
-        # password actually required and hashed
-        if self.password is not None:
-            employee.set_password(self.password)
-        employee.save()
-        return employee

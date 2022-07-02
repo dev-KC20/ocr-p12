@@ -4,10 +4,10 @@ from django.contrib.admin.models import ADDITION, LogEntry
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 
-from .models import Employee
+from .models import User
 
 
-class CustomEmployeeAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):
     fieldsets = (
         ("Personal informations", {"fields": ("username", "password", "first_name", "last_name", "email")}),
         ("Permissions", {"fields": ("department",)}),
@@ -18,7 +18,7 @@ class CustomEmployeeAdmin(UserAdmin):
     list_filter = ("department", "is_active")
 
 
-admin.site.register(Employee, CustomEmployeeAdmin)
+admin.site.register(User, CustomUserAdmin)
 admin.site.unregister(Group)
 admin.site.site_header = cts.ADMIN_SITE_HEADER
 admin.site.site_title = cts.ADMIN_SITE_TITLE
