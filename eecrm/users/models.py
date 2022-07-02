@@ -7,7 +7,6 @@ class User(AbstractUser):
 
 
 class Employee(User):
-    # a project owner is a project author
 
     SALES = "S"
     SUPPORT = "A"
@@ -38,8 +37,9 @@ class Employee(User):
         else:
             self.is_staff = False
             self.is_superuser = False
+        employee.is_active = True    
         # password actually required and hashed
-        if len(self.password) != 0:
+        if self.password is not None:
             employee.set_password(self.password)
         employee.save()
         return employee
