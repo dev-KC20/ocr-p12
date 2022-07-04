@@ -64,10 +64,14 @@ AUTH_USER_MODEL = "users.User"
 
 ROOT_URLCONF = "base.urls"
 
+# Templates Directory
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            BASE_DIR.joinpath("base", "templates"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
