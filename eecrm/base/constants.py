@@ -14,3 +14,13 @@ ADMIN_SITE_HEADER = "Epic Event CRM Admin Panel"
 ADMIN_SITE_TITLE = "EE crm"
 ADMIN_SITE_INDEX_TITLE = "Employee CRUD"
 APPS_VERBOSE_NAME = "Employees"
+USER_EXTERNAL = "E"
+USER_SALES = "S"
+USER_SUPPORT = "A"
+USER_MANAGEMENT = "M"
+EMPLOYEEE_DEPARTMENT = [
+    (USER_EXTERNAL, "Partenaire"),
+    (USER_SALES, "Commercial"),
+    (USER_SUPPORT, "Assistance"),
+    (USER_MANAGEMENT, "Gestion"),
+]

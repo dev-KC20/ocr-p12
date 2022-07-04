@@ -59,6 +59,9 @@ MIDDLEWARE = [
 # rather use own user
 AUTH_USER_MODEL = "users.User"
 
+# # admin site url default to users sub site
+# LOGIN_REDIRECT_URL = 'admin_users_list'
+
 ROOT_URLCONF = "base.urls"
 
 TEMPLATES = [
@@ -162,7 +165,7 @@ LOGGING = {
             "class": "logging.StreamHandler",
         },
         "eecrm_errors_log_file": {
-            "level": "ERROR",
+            "level": "INFO",
             "class": "logging.handlers.WatchedFileHandler",
             "filename": "eecrm_errors.log",
         },
