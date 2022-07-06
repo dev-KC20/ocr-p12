@@ -1,8 +1,12 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import Group
+# import the logging library
+import logging
 
 from .models import User
 import base.constants as cts
+
+
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -15,6 +19,9 @@ class CustomUserCreationForm(UserCreationForm):
         'Créer, mettre à jour et supprimer des utilisateurs dans le système CRM.
          Afficher et modifier toutes les données dans le système CRM.'
         """
+        # Get an instance of a logger
+        logger = logging.getLogger(__name__)
+
         user = super().save(commit=False)
         if user.department == cts.USER_MANAGEMENT:
             user.is_superuser = True
@@ -26,7 +33,8 @@ class CustomUserCreationForm(UserCreationForm):
             user.is_staff = True
 
         user.is_active = True
-        print('save user name, dpt, active,staff:', user.username, user.department, user.is_active, user.is_staff,)
+        logger.warning('save user name, dpt, active,staff:', user.username, user.department, user.is_active, user.is_staff,)
+        # print('save user name, dpt, active,staff:', user.username, user.department, user.is_active, user.is_staff,)
         # password required and hashed
         if user.password is not None:
             if self.password1 is not None:

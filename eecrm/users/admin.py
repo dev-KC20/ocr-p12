@@ -1,14 +1,16 @@
-import base.constants as cts
+# import the logging library
+import logging
+
 from django.contrib import admin
 from django.contrib.admin.models import ADDITION, CHANGE, DELETION, LogEntry
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 from django.urls import reverse
-from django.contrib.admin.views.decorators import staff_member_required
 
-from .models import User
-
+import base.constants as cts
 from .forms import CustomUserCreationForm
+from .models import User
 
 
 class CustomUserAdmin(UserAdmin):
@@ -44,6 +46,8 @@ class CustomUserAdmin(UserAdmin):
     )
     list_filter = ("department", "is_active")
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 admin.site.unregister(Group)
 admin.site.register(User, CustomUserAdmin)
@@ -52,3 +56,4 @@ admin.site.site_title = cts.ADMIN_SITE_TITLE
 # admin.site.site_url = "/users.user/"
 admin.site.index_title = cts.ADMIN_SITE_INDEX_TITLE
 LogEntry.objects.filter(action_flag=ADDITION)
+logger.warning('admin entred by' )

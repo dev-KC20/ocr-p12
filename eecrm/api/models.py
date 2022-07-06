@@ -2,10 +2,13 @@ import base.constants as cts
 from django.contrib.auth import get_user_model
 from django.core.validators import RegexValidator
 from django.db import models
+# from django.conf import settings
 
-User = get_user_model()
+from users.models import User
 
+# User = get_user_model()
 
+# print('settings.AUTH_USER_MODEL',settings.AUTH_USER_MODEL)
 def get_sentinel_user():
     # for RGPD & others reasons when a contributor is deleted one want to keep projects, issues or comments
     return get_user_model().objects.get_or_create(username="deletedUser")[0]
@@ -25,8 +28,6 @@ class Client(User):
         max_length=16,
         blank=True,
     )
-    # date_created = models.DateTimeField(auto_now_add=True)
-    # date_updated = models.DateTimeField(auto_now=True)
     sale_contact = models.ForeignKey(
         User,
         related_name="client_salesman",
@@ -34,7 +35,15 @@ class Client(User):
     )
 
     def __str__(self):
-        return self.company_name
+        return f"{self.company_name} "
+
+    def save(self, *args, **kwargs):
+        # surcharge to properly encrypt password
+        user = super(Client, self)
+        if user.password is not None and user.password != '':
+            user.set_password(self.password)
+        if user.username is not None:
+            user.save(*args, **kwargs)
 
 
 class Contract(models.Model):
@@ -82,7 +91,7 @@ class Event(models.Model):
     date_updated = models.DateTimeField(auto_now=True)
 
     support_contact = models.ForeignKey(
-        User,
+        User(),
         related_name="event_manager",
         on_delete=models.PROTECT,
     )

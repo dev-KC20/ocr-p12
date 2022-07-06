@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.urls import path, include
 
-# from users import views
+# import constants as cts 
+# api_versioned_url = "api/v" + cts.API_VERSION + "/"
 
 urlpatterns = [
-    # path("login_success/", views.login_success, name="login_success"),
     path("hidden-admin/", include("users.urls")),
+    # path(api_versioned_url, include("api.urls")),
     path("api/v1/", include("api.urls")),
 ]
