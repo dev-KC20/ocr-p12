@@ -17,7 +17,7 @@ logger.info(cts.HELLO_WORLD)
 
 
 def get_data_or_error(request_data, field_name, get_data):
-    if not field_name in request_data:
+    if field_name not in request_data:
         error_message = f""" {field_name} is missing in the body of the request, pls complete it. """
         raise ValidationError(error_message)
     else:
@@ -72,7 +72,7 @@ class ContractViewSet(ModelViewSet):
         connected_user_department = User.objects.filter(id=self.request.user.id).values("department")[0]["department"]
         # check user.department in ['S','M']
         # this is already checked thru permissions but we keep it in case we let thru to message
-        if not connected_user_department in cts.SALES_ENABLED_DEPARTMENT:
+        if connected_user_department not in cts.SALES_ENABLED_DEPARTMENT:
             error_message = f"""You, user {self.request.user}
              need to be member of Sales, pls work on this with the sales team."""
             raise ValidationError(error_message)
@@ -117,7 +117,7 @@ class ContractViewSet(ModelViewSet):
         connected_user_department = User.objects.filter(id=self.request.user.id).values("department")[0]["department"]
         # check user.department in ['S','M']
         # this is already checked thru permissions but we keep it in case we let thru to message
-        if not connected_user_department in cts.SALES_ENABLED_DEPARTMENT:
+        if connected_user_department not in cts.SALES_ENABLED_DEPARTMENT:
             error_message = f"""You, user {self.request.user}
              need to be member of Sales, pls work on this with the sales team."""
             raise ValidationError(error_message)
@@ -140,12 +140,13 @@ class ContractViewSet(ModelViewSet):
         before_status = before_contract.status
         # no payment due in body if not manager
         if (connected_user_department != cts.USER_MANAGEMENT) and (target_payment_due_str):
-            error_message = f"""Dear {self.request.user} only managers are allowed to change payment due dates, pls check with the manager."""
+            error_message = f"""Dear {self.request.user} only managers are 
+                allowed to change payment due dates, pls check with the manager."""
             raise ValidationError(error_message)
         # check that status is changed only by Sales team (& Management)
         # this is already checked as only sale can change contracts but we keep it in case we let thru to message
         if connected_user_department not in cts.SALES_ENABLED_DEPARTMENT and before_status != target_status:
-            error_message = f"""Only a sales member team is allowed to change the status, pls check with Sales."""
+            error_message = """Only a sales member team is allowed to change the status, pls check with Sales."""
             raise ValidationError(error_message)
         super().perform_update(serializer, *args, **kwargs)
         logger.info(f"[{datetime.now()}]: Contract.update {self.request.data} by {self.request.user}")

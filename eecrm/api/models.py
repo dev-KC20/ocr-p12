@@ -2,6 +2,7 @@ import base.constants as cts
 from django.contrib.auth import get_user_model
 from django.core.validators import RegexValidator
 from django.db import models
+
 # from django.conf import settings
 
 from users.models import User
@@ -40,7 +41,7 @@ class Client(User):
     def save(self, *args, **kwargs):
         # surcharge to properly encrypt password
         user = super(Client, self)
-        if user.password is not None and user.password != '':
+        if user.password is not None and user.password != "":
             user.set_password(self.password)
         if user.username is not None:
             user.save(*args, **kwargs)

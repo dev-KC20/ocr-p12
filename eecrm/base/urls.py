@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path, include
 
-# import constants as cts 
+# import constants as cts
 # api_versioned_url = "api/v" + cts.API_VERSION + "/"
 
 urlpatterns = [

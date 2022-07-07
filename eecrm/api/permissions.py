@@ -29,7 +29,7 @@ class EmployeeRole(BasePermission):
         user_employee = User.objects.get(id=request.user.id)
         user_role = user_employee.department
         # the support guy is the only one not allowed to [C]reate
-        if not request.user.is_superuser and user_role == "A" and view.action == "create":
+        if (not request.user.is_superuser) and (user_role == "A") and (view.action == "create"):
             return False
         return bool(request.user and request.user.is_authenticated)
 
@@ -56,7 +56,7 @@ class EmployeeRole(BasePermission):
 
         # authorise section
         # let superuser be superuser == have full access as well as managment
-        if request.user.is_superuser or user_role == "M":
+        if (request.user.is_superuser) or (user_role == "M"):
             return True
         # all authenticated employees can read all obj
         if request.method in cts.READ_METHODS:
