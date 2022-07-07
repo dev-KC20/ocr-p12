@@ -6,6 +6,7 @@
 
 API_VERSION = "1"
 PHONE_NOT_VALID = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+HELLO_WORLD = "* ***  Hello, it all starts here *** *"
 SOMETHING_WRONG = "Something went wrong-please try again"
 TYPE_ERROR = "Type error, pls check."
 INDEX_ERROR = "Index error, pls check."
@@ -33,3 +34,5 @@ EDIT_DELETE_METHODS = ["PUT", "PATCH", "DELETE"]
 EDIT_METHODS = ["PUT", "PATCH"]
 CREATE_METHODS = ["POST"]
 READ_METHODS = ["GET"]
+# logging
+SERVER_LOGGER = "eecrm"

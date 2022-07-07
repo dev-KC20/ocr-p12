@@ -1,3 +1,4 @@
+# import the logging library
 import logging
 from datetime import datetime
 from django.contrib.auth import get_user_model
@@ -12,6 +13,18 @@ import base.constants as cts
 
 User = get_user_model()
 logger = logging.getLogger(__name__)
+logger.info(cts.HELLO_WORLD)
+
+
+def get_data_or_error(request_data, field_name, get_data):
+    if not field_name in request_data:
+        error_message = f""" {field_name} is missing in the body of the request, pls complete it. """
+        raise ValidationError(error_message)
+    else:
+        if get_data:
+            return request_data[field_name]
+        else:
+            return None
 
 
 class ClientViewSet(ModelViewSet):
@@ -26,32 +39,37 @@ class ContractViewSet(ModelViewSet):
 
     def get_queryset(self):
         # filter the url shown to employees depending on action/method
-        if self.request.method not in cts.READ_METHODS:
+        # if self.request.method not in cts.READ_METHODS:
 
-            client_id = self.kwargs.get("client_pk")
-            contract_pk = self.kwargs.get("pk")
-            if client_id and contract_pk:
-                queryset = Contract.objects.filter(id=contract_pk)
-            elif client_id:
-                queryset = Contract.objects.filter(client_id=client_id)
-            else:
-                queryset = Contract.objects.all()
-        return queryset
+        #     client_id = self.kwargs.get("client_pk")
+        #     contract_pk = self.kwargs.get("pk")
+        #     if client_id and contract_pk:
+        #         self.queryset = Contract.objects.filter(id=contract_pk)
+        #     elif client_id:
+        #         self.queryset = Contract.objects.filter(client_id=client_id)
+        #     else:
+        #         self.queryset = Contract.objects.all()
+        return Contract.objects.all()
 
     def perform_create(self, serializer, *args, **kwargs):
         """body of target data to be created
         * create
             check user.department in ['S','M']
             check client url == client body
+            check client is not prospect
             check if user.department == 'S' alors sale_contact == request.user
 
         """
-        create_data = self.request.data
-        target_client_id = create_data["client"]
-        target_sale_contact_id = create_data["sale_contact"]
-        # current client in the url
+        # check for mandatory fields in body of request
+        get_data_or_error(self.request.data, "contract_name", False)
+        get_data_or_error(self.request.data, "contract_amount", False)
+        get_data_or_error(self.request.data, "payment_due", False)
+        target_client_id = get_data_or_error(self.request.data, "client", True)
+        target_sale_contact_id = get_data_or_error(self.request.data, "sale_contact", True)
+
+        # check url & get current client
         client_id = self.kwargs.get("clients_pk")
-        connected_user_department = User.objects.filter(id=self.request.user.id).values('department')[0]["department"]
+        connected_user_department = User.objects.filter(id=self.request.user.id).values("department")[0]["department"]
         # check user.department in ['S','M']
         # this is already checked thru permissions but we keep it in case we let thru to message
         if not connected_user_department in cts.SALES_ENABLED_DEPARTMENT:
@@ -70,28 +88,33 @@ class ContractViewSet(ModelViewSet):
             raise ValidationError(error_message)
 
         super().perform_create(serializer, *args, **kwargs)
-        logger.info(f"{datetime.now()} : Contract.add {create_data}" f" by {request.user}")
+        logger.info(f"[{datetime.now()}]: Contract.add {self.request.data} by {self.request.user}")
 
     def perform_update(self, serializer, *args, **kwargs):
         """body of target data to be updated
-            * perform_update 
-            # status is to be set to true by Sales team 
-            check user.department in ['S','M']
-            check client url == client body
-            check contract url == contract body
-            check if user.department == 'S' alors sale_contact == request.user
-            check payment_due change only if user.department == 'M'
+        * perform_update
+        check that status is to be set to true by Sales team
+        check user.department in ['S','M']
+        check client url == client body
+        check contract url == contract body
+        check if user.department == 'S' alors sale_contact == request.user
+        check payment_due change only if user.department == 'M'
 
         """
-        update_data = self.request.data
-        target_client_id = update_data["client"]
-        target_contract_id = update_data["contract"]
-        target_sale_contact_id = update_data["sale_contact"]
-        target_payment_due = update_data["payment_due"]
-        # current client in the url
+        # check for mandatory fields in body of request
+        target_status = get_data_or_error(self.request.data, "status", True)
+        get_data_or_error(self.request.data, "contract_name", False)
+        get_data_or_error(self.request.data, "contract_amount", False)
+        target_payment_due_str = get_data_or_error(self.request.data, "payment_due", True)
+
+        target_sale_contact_id = get_data_or_error(self.request.data, "sale_contact", True)
+        target_client_id = get_data_or_error(self.request.data, "client", True)
+        target_contract_id = get_data_or_error(self.request.data, "id", True)
+        # check url & get current client & contract
         client_id = self.kwargs.get("clients_pk")
         contract_id = self.kwargs.get("pk")
-        connected_user_department = User.objects.filter(id=self.request.user.id).values('department')[0]["department"]
+
+        connected_user_department = User.objects.filter(id=self.request.user.id).values("department")[0]["department"]
         # check user.department in ['S','M']
         # this is already checked thru permissions but we keep it in case we let thru to message
         if not connected_user_department in cts.SALES_ENABLED_DEPARTMENT:
@@ -113,13 +136,19 @@ class ContractViewSet(ModelViewSet):
             error_message = f"""You {self.request.user} are the sales contact, pls put your user id as contact."""
             raise ValidationError(error_message)
         # check payment_due change only if user.department == 'M'
-        before_payment_due = Contract.objects.get(pk=contract_id).payment_due
-        if (connected_user_department != cts.USER_MANAGEMENT) and (target_payment_due != before_payment_due):
+        before_contract = Contract.objects.get(pk=contract_id)
+        before_status = before_contract.status
+        # no payment due in body if not manager
+        if (connected_user_department != cts.USER_MANAGEMENT) and (target_payment_due_str):
             error_message = f"""Dear {self.request.user} only managers are allowed to change payment due dates, pls check with the manager."""
             raise ValidationError(error_message)
-
+        # check that status is changed only by Sales team (& Management)
+        # this is already checked as only sale can change contracts but we keep it in case we let thru to message
+        if connected_user_department not in cts.SALES_ENABLED_DEPARTMENT and before_status != target_status:
+            error_message = f"""Only a sales member team is allowed to change the status, pls check with Sales."""
+            raise ValidationError(error_message)
         super().perform_update(serializer, *args, **kwargs)
-        logger.info(f"{datetime.now()} : Contract.update {update_data}" f" by {request.user}")
+        logger.info(f"[{datetime.now()}]: Contract.update {self.request.data} by {self.request.user}")
 
 
 class EventViewSet(ModelViewSet):

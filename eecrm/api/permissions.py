@@ -37,8 +37,12 @@ class EmployeeRole(BasePermission):
         # here the request.user.is_authenticated
 
         # lookup section obj in ['Client','Contract','Event']
-        if view.kwargs.get("pk"):
-            current_client_id = int(view.kwargs.get("pk"))
+        if isinstance(obj, Client):
+            if view.kwargs.get("pk"):
+                current_client_id = int(view.kwargs.get("pk"))
+        else:
+            if view.kwargs.get("clients_pk"):
+                current_client_id = int(view.kwargs.get("clients_pk"))
         if obj.pk:
             current_obj_pk = obj.pk
         # get the sale contact person for the current client (own status)
@@ -53,7 +57,7 @@ class EmployeeRole(BasePermission):
         # authorise section
         # let superuser be superuser == have full access as well as managment
         if request.user.is_superuser or user_role == "M":
-            return bool(request.user and request.user.is_superuser)
+            return True
         # all authenticated employees can read all obj
         if request.method in cts.READ_METHODS:
             return True

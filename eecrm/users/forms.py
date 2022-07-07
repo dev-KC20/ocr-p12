@@ -1,12 +1,15 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import Group
 # import the logging library
 import logging
-
+from datetime import datetime
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.models import Group
 from .models import User
 import base.constants as cts
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
+# logger.info(f"[{datetime.now()}]:  Usercreationform")
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -19,9 +22,6 @@ class CustomUserCreationForm(UserCreationForm):
         'Créer, mettre à jour et supprimer des utilisateurs dans le système CRM.
          Afficher et modifier toutes les données dans le système CRM.'
         """
-        # Get an instance of a logger
-        logger = logging.getLogger(__name__)
-
         user = super().save(commit=False)
         if user.department == cts.USER_MANAGEMENT:
             user.is_superuser = True
@@ -33,8 +33,6 @@ class CustomUserCreationForm(UserCreationForm):
             user.is_staff = True
 
         user.is_active = True
-        logger.warning('save user name, dpt, active,staff:', user.username, user.department, user.is_active, user.is_staff,)
-        # print('save user name, dpt, active,staff:', user.username, user.department, user.is_active, user.is_staff,)
         # password required and hashed
         if user.password is not None:
             if self.password1 is not None:
@@ -42,10 +40,16 @@ class CustomUserCreationForm(UserCreationForm):
             if self.password is not None:
                 user.set_password(self.password)
 
-        # managers = Group.objects.get_or_create(name=user.department)
-        # print('admin managers group', managers[0])
-        # manager = managers[0]
         user.save()
-        # manager.save()
-        # manager.user_set.add(user)
+        logger.info(f"[{datetime.now()}]: User.Create {user.username,} by {self.request.user}")
+        return user
+
+class CustomUserChangeForm(UserChangeForm):
+
+    def save(self, commit=True):
+        """ Here the concern is only trace who changes a user
+            owasp
+        """
+        user = super().save(commit=True)
+        logger.info(f"[{datetime.now()}]: User.Update {user.username,} by {self.request.user}")
         return user
