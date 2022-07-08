@@ -2,7 +2,7 @@
 
 
 """
-
+from rest_framework.permissions import SAFE_METHODS
 
 API_VERSION = "1"
 PHONE_NOT_VALID = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
@@ -33,6 +33,6 @@ SUPPORT_ENABLED_DEPARTMENT = [USER_SUPPORT, USER_MANAGEMENT]
 EDIT_DELETE_METHODS = ["PUT", "PATCH", "DELETE"]
 EDIT_METHODS = ["PUT", "PATCH"]
 CREATE_METHODS = ["POST"]
-READ_METHODS = ["GET"]
+READ_METHODS = SAFE_METHODS
 # logging
 SERVER_LOGGER = "eecrm"

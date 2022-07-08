@@ -30,12 +30,12 @@ def get_data_or_error(request_data, field_name, get_data):
 class ClientViewSet(ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
-    permission_classes = [EmployeeRole]
+    permission_classes = [HasManagerRole, HasSalesRole]
 
 
 class ContractViewSet(ModelViewSet):
     serializer_class = ContractSerializer
-    permission_classes = [EmployeeRole]
+    permission_classes = [HasManagerRole, HasSalesRole]
 
     def get_queryset(self):
         # filter the url shown to employees depending on action/method
@@ -155,4 +155,4 @@ class ContractViewSet(ModelViewSet):
 class EventViewSet(ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
-    permission_classes = [EmployeeRole]
+    permission_classes = [HasManagerRole, HasSalesRole, HasSupportRole]
