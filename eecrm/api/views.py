@@ -86,7 +86,11 @@ class ContractViewSet(ModelViewSet):
         if (connected_user_department == cts.USER_SALES) and (target_sale_contact_id != self.request.user.id):
             error_message = f"""You {self.request.user} are the sales contact, pls put your user id as contact."""
             raise ValidationError(error_message)
-
+        # check client is not prospect
+        target_client = Client.objetcs.get(id=target_client_id)
+        if (target_client.is_prospect):
+            error_message = f"""This client is still a prospect. Please upgrade him full client before adding contract."""
+            raise ValidationError(error_message)
         super().perform_create(serializer, *args, **kwargs)
         logger.info(f"[{datetime.now()}]: Contract.add {self.request.data} by {self.request.user}")
 

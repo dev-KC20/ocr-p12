@@ -36,3 +36,5 @@ CREATE_METHODS = ["POST"]
 READ_METHODS = SAFE_METHODS
 # logging
 SERVER_LOGGER = "eecrm"
+# testing
+TEST_COMPANY_NAME_1 = "The great loop"
