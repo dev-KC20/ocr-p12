@@ -5,8 +5,9 @@ from django.contrib.auth import get_user_model
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.exceptions import ValidationError
 
+from .filters import ContractFilter
 from .models import Client, Contract, Event
-from .permissions import EmployeeRole
+from .permissions import HasManagerRole, HasSupportRole, HasSalesRole
 from .serializers import ClientSerializer, ContractSerializer, EventSerializer
 
 import base.constants as cts
@@ -36,20 +37,24 @@ class ClientViewSet(ModelViewSet):
 class ContractViewSet(ModelViewSet):
     serializer_class = ContractSerializer
     permission_classes = [HasManagerRole, HasSalesRole]
+    filterset_class = ContractFilter
+    search_fields = ["contract_name"]
+    ordering_fields = ["contract_name"]
 
     def get_queryset(self):
         # filter the url shown to employees depending on action/method
+        # self.action == 'list'
         # if self.request.method not in cts.READ_METHODS:
 
-        #     client_id = self.kwargs.get("client_pk")
-        #     contract_pk = self.kwargs.get("pk")
-        #     if client_id and contract_pk:
-        #         self.queryset = Contract.objects.filter(id=contract_pk)
-        #     elif client_id:
-        #         self.queryset = Contract.objects.filter(client_id=client_id)
-        #     else:
-        #         self.queryset = Contract.objects.all()
-        return Contract.objects.all()
+        client_id = self.kwargs.get("clients_pk")
+        contract_pk = self.kwargs.get("pk")
+        if client_id and contract_pk:
+            self.queryset = Contract.objects.filter(id=contract_pk)
+        elif client_id:
+            self.queryset = Contract.objects.filter(client_id=client_id)
+        else:
+            self.queryset = Contract.objects.all()
+        return self.queryset
 
     def perform_create(self, serializer, *args, **kwargs):
         """body of target data to be created
@@ -87,9 +92,11 @@ class ContractViewSet(ModelViewSet):
             error_message = f"""You {self.request.user} are the sales contact, pls put your user id as contact."""
             raise ValidationError(error_message)
         # check client is not prospect
-        target_client = Client.objetcs.get(id=target_client_id)
-        if (target_client.is_prospect):
-            error_message = f"""This client is still a prospect. Please upgrade him full client before adding contract."""
+        target_client = Client.objects.get(id=target_client_id)
+        if target_client.is_prospect:
+            error_message = (
+                f"""This client is still a prospect. Please upgrade him full client before adding contract."""
+            )
             raise ValidationError(error_message)
         super().perform_create(serializer, *args, **kwargs)
         logger.info(f"[{datetime.now()}]: Contract.add {self.request.data} by {self.request.user}")

@@ -19,7 +19,7 @@ class ClientSerializer(ModelSerializer):
             "is_active",
             "date_created",
             "date_updated",
-            "username",
+            # "username",
         ]
 
 
