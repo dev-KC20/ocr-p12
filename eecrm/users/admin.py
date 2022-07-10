@@ -11,6 +11,9 @@ from django.contrib.auth.models import Group
 import base.constants as cts
 from .forms import CustomUserCreationForm
 from .models import User
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Permission
+from django.contrib.contenttypes.models import ContentType
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -49,13 +52,25 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ("department", "is_active")
 
     def has_view_or_change_permission(self, request, obj=None):
-        # get the request user department
+        # # # let superuser be superuser == have full access as well as managment
+        if request.user.is_superuser:
+            return True
+        # # get the request user department
         user_employee = User.objects.get(id=request.user.id)
         user_role = user_employee.department
-        # authorise section
-        # let superuser be superuser == have full access as well as managment
-        if (request.user.is_superuser) or (user_role == "M"):
+        # get User model permissions
+        content_type = ContentType.objects.get_for_model(User)
+        user_model_permission = Permission.objects.filter(content_type=content_type)
+        # # authorise section
+        if user_role == "M":
+            # To add permissions
+            for perm in user_model_permission:
+                user_employee.user_permissions.add(perm)
+                logger.info(
+                    f"[{datetime.now()}]: Admin site {user_employee} had {perm} checked by {request.user.username}"
+                )
             return True
+
         return False
 
     def save_model(self, request, obj, form, change):
@@ -70,6 +85,8 @@ admin.site.site_header = cts.ADMIN_SITE_HEADER
 admin.site.site_title = cts.ADMIN_SITE_TITLE
 admin.site.index_title = cts.ADMIN_SITE_INDEX_TITLE
 admin.site.site_url = None
+if False:
+    print_perm()
 
 
 # LogEntry settings (c) malikalbeik @/blog/monitoring-user-actions-with-logentry-in-django-ad
