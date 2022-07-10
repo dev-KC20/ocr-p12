@@ -20,15 +20,6 @@ class CustomUserCreationForm(UserCreationForm):
          Afficher et modifier toutes les données dans le système CRM.'
         """
         user = super().save(commit=False)
-        # if user.department == cts.USER_MANAGEMENT:
-        #     user.is_superuser = True
-        # else:
-        #     user.is_superuser = False
-        # if user.department == cts.USER_EXTERNAL:
-        #     user.is_staff = False
-        # else:
-        #     user.is_staff = True
-
         user.is_active = True
         # password required and hashed
         try:

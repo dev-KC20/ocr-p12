@@ -48,7 +48,7 @@ class CustomUserAdmin(UserAdmin):
         ),
         ("Dates", {"fields": ("date_created", "date_updated", "last_login")}),
     )
-    readonly_fields = ("date_created", "date_updated", "last_login")
+    readonly_fields = ("date_created", "date_updated", "last_login", "is_superuser")
     list_filter = ("department", "is_active")
 
     def has_view_or_change_permission(self, request, obj=None):
@@ -74,6 +74,8 @@ class CustomUserAdmin(UserAdmin):
         return False
 
     def save_model(self, request, obj, form, change):
+        # if obj.is_superuser not ( request.user.is_superuser):
+        #     pass
         obj.user = request.user
         logger.info(f"[{datetime.now()}]: User.Create|Update {obj.username} by {request.user.username}")
         super().save_model(request, obj, form, change)
@@ -85,8 +87,6 @@ admin.site.site_header = cts.ADMIN_SITE_HEADER
 admin.site.site_title = cts.ADMIN_SITE_TITLE
 admin.site.index_title = cts.ADMIN_SITE_INDEX_TITLE
 admin.site.site_url = None
-if False:
-    print_perm()
 
 
 # LogEntry settings (c) malikalbeik @/blog/monitoring-user-actions-with-logentry-in-django-ad
@@ -115,5 +115,5 @@ class LogEntryAdmin(admin.ModelAdmin):
         return False
 
     def has_view_permission(self, request, obj=None):
-        # return request.user.is_superuser
-        return True
+        return request.user.is_superuser
+        # return True
