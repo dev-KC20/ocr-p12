@@ -38,3 +38,4 @@ READ_METHODS = SAFE_METHODS
 SERVER_LOGGER = "eecrm"
 # testing
 TEST_COMPANY_NAME_1 = "The great loop"
+TEST_CONTRACT_NAME_1 = "The blue contract"

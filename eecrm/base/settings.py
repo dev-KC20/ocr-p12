@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",
+    "django_filters",
     "rest_framework",
     "rest_framework_simplejwt",
     "users",
@@ -152,6 +153,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
 }
 
 # set the lifespan of the JWT tokens
@@ -220,6 +222,6 @@ LOGGING = {
     },
 }
 
-CSRF_COOKIE_DOMAIN = '127.0.0.1'
+CSRF_COOKIE_DOMAIN = "127.0.0.1"
 CSRF_COOKIE_SECURE = False
 SESSION_COOKIE_SECURE = False
