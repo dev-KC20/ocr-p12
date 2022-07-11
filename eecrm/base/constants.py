@@ -3,6 +3,8 @@
 
 """
 from rest_framework.permissions import SAFE_METHODS
+from datetime import datetime
+import zoneinfo
 
 API_VERSION = "1"
 PHONE_NOT_VALID = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
@@ -39,3 +41,10 @@ SERVER_LOGGER = "eecrm"
 # testing
 TEST_COMPANY_NAME_1 = "The great loop"
 TEST_CONTRACT_NAME_1 = "The blue contract"
+TEST_CONTRACT_AMOUNT = 125
+TEST_USERNAME_SALES = "johncherokee"
+TEST_USERNAME_CLIENT = "mollymallone"
+TEST_SECRET_PASSWORD = "thetopsecretpass"
+# TEST_USER_ID = 1
+tzinfo=zoneinfo.ZoneInfo(key="Europe/Paris")
+TEST_PAYMENT_DUE = datetime(2023, 7, 11, 15, 29, 27, 929520, tzinfo=tzinfo)

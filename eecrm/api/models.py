@@ -67,7 +67,7 @@ class Contract(models.Model):
     )
 
     def __str__(self):
-        return f"{self.contract.contract_name} for {self.client.company_name} status on {self.status}."
+        return self.contract_name
 
 
 class Event(models.Model):
@@ -84,9 +84,10 @@ class Event(models.Model):
         max_length=1,
         choices=EVENT_PROGRESS_STATUS,
         default=OPEN,
+        blank=False, null=False,
     )
-    attendees = models.IntegerField()
-    date_event = models.DateTimeField()
+    attendees = models.IntegerField(default=50, null=False,)
+    date_event = models.DateTimeField(blank=False, null=False,)
     notes = models.CharField(max_length=1024, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
