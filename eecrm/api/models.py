@@ -82,7 +82,6 @@ class Contract(models.Model):
 
 class Event(models.Model):
 
-  
     event_status = models.CharField(
         max_length=1,
         choices=cts.EVENT_PROGRESS_STATUS,

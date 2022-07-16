@@ -6,12 +6,12 @@ from django.contrib.admin.models import LogEntry
 
 # from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import Group
+
+# from django.contrib.auth.models import Group
 
 import base.constants as cts
 from .forms import CustomUserCreationForm
 from .models import User
-from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
 
@@ -34,7 +34,10 @@ class CustomUserAdmin(UserAdmin):
         "is_active",
     )
     fieldsets = (
-        ("Identity", {"fields": ("username", "password", "first_name", "last_name", "email")}),
+        (
+            "Identity",
+            {"fields": ("username", "password", "first_name", "last_name", "email")},
+        ),
         (
             "Roles",
             {
@@ -90,7 +93,9 @@ class CustomUserAdmin(UserAdmin):
             elif obj.department in cts.NOT_MANAGING_ENABLED_DEPARTMENT:
                 obj.is_staff = False
             # obj = request.user
-            logger.info(f"[{datetime.now()}]: User.Create|Update {obj.username} by {request.user.username}")
+            logger.info(
+                f"[{datetime.now()}]: User.Create|Update {obj.username} by {request.user.username}"
+            )
         super().save_model(request, obj, form, change)
 
 
@@ -117,8 +122,9 @@ class LogEntryAdmin(admin.ModelAdmin):
         "content_type",
         "action_flag",
     ]
-    # only superuser can read the history
+
     def has_add_permission(self, request):
+        # only superuser can read the history
         return request.user.is_superuser
 
     def has_change_permission(self, request, obj=None):

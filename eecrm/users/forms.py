@@ -3,7 +3,6 @@ import logging
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
-import base.constants as cts
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -26,7 +25,9 @@ class CustomUserCreationForm(UserCreationForm):
 
             user.set_password(self.cleaned_data["password1"])
         except AttributeError:  # Be explicit with catching exceptions.
-            logger.info(f"[{datetime.now()}]: User.Create password mismatch, no action needed.")
+            logger.info(
+                f"[{datetime.now()}]: User.Create password mismatch, no action needed."
+            )
 
         user.save()
         logger.info(f"[{datetime.now()}]: User.Create {user.username,} ")

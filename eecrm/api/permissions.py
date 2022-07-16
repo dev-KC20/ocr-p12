@@ -13,8 +13,16 @@ from .models import Client, Contract, Event
 # |	Sales	  |	9.POST /api/v1/clients/{id}/contracts/	                |	C own	      |
 # |	Sales	  |	11.PUT /api/v1/clients/{id}/contracts/{id}	            |	U own	      |
 # |	Sales	  |	14.POST /api/v1/clients/{id}/contracts/{id}/events/	    |	C own	      |
-# |	Sales	  |	3.GET /api/v1/clients/  5.GET /api/v1/clients/{id}/   8.GET /api/v1/clients/{id}/contracts/   10.GET /api/v1/clients/{id}/contracts/{id}   13.GET /api/v1/clients/{id}/contracts/{id}/events/   15.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	                   |	  R	       |
-# |	Support	  |	3.GET /api/v1/clients/ 5.GET /api/v1/clients/{id}/ 8.GET /api/v1/clients/{id}/contracts/ 10.GET /api/v1/clients/{id}/contracts/{id} 13.GET /api/v1/clients/{id}/contracts/{id}/events/ 15.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	                    |	    R	      |
+# |	Sales	  |	3.GET /api/v1/clients/  5.GET /api/v1/clients/{id}/
+#               8.GET /api/v1/clients/{id}/contracts/
+#               10.GET /api/v1/clients/{id}/contracts/{id}
+#               13.GET /api/v1/clients/{id}/contracts/{id}/events/   1
+#               5.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  R	       |
+# |	Support	  |	3.GET /api/v1/clients/ 5.GET /api/v1/clients/{id}/
+#               8.GET /api/v1/clients/{id}/contracts/
+#               10.GET /api/v1/clients/{id}/contracts/{id}
+#               13.GET /api/v1/clients/{id}/contracts/{id}/events/   1
+#               5.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  R	       |
 # |	Support	  |	16.PUT /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  U own	    |
 # |	Mngnt	  |	admin	                                                |	CRUD /users	|
 # |	Mngnt	  |	all E.P.	                                            |	CRUD	      |
@@ -23,13 +31,11 @@ from .models import Client, Contract, Event
 # authenticated users can Read all clients & dependencies they are contact to any
 
 
-
-
 class HasManagerRole(BasePermission):
     """
-    
+
     NOT USED AS IS
-    
+
     return True if a manager is authorized to CRUDL view/serializer
     and all objects
 
@@ -94,7 +100,11 @@ class HasSalesRole(BasePermission):
         if obj.pk:
             current_obj_pk = obj.pk
         # get the sale contact person for the current client (own status)
-        if isinstance(obj, Client) or isinstance(obj, Contract) or isinstance(obj, Event):
+        if (
+            isinstance(obj, Client)
+            or isinstance(obj, Contract)
+            or isinstance(obj, Event)
+        ):
             if not view.kwargs.get("pk"):
                 current_client_id = current_obj_pk
             sale_contact = Client.objects.get(id=current_client_id).sale_contact.id
@@ -157,28 +167,16 @@ class HasSupportRole(BasePermission):
         user_employee = User.objects.get(id=request.user.id)
         user_role = user_employee.department
         # the support guy is the only one not allowed to [C]reate actions
-        if (not request.user.is_superuser) and (user_role == "A") and (view.action == "create"):
+        if (
+            (not request.user.is_superuser)
+            and (user_role == "A")
+            and (view.action == "create")
+        ):
             return False
         return bool(request.user and request.user.is_authenticated)
 
-
     def has_object_permission(self, request, view, obj):
         # here the request.user.is_authenticated
-
-        # lookup section obj in ['Client','Contract','Event']
-        if isinstance(obj, Client):
-            if view.kwargs.get("pk"):
-                current_client_id = int(view.kwargs.get("pk"))
-        else:
-            if view.kwargs.get("clients_pk"):
-                current_client_id = int(view.kwargs.get("clients_pk"))
-        if obj.pk:
-            current_obj_pk = obj.pk
-        # get the sale contact person for the current client (own status)
-        if isinstance(obj, Client) or isinstance(obj, Contract) or isinstance(obj, Event):
-            if not view.kwargs.get("pk"):
-                current_client_id = current_obj_pk
-            sale_contact = Client.objects.get(id=current_client_id).sale_contact.id
         # get the request user department
         user_employee = User.objects.get(id=request.user.id)
         user_role = user_employee.department
@@ -198,4 +196,3 @@ class HasSupportRole(BasePermission):
                 support_contact = obj.support_contact
                 if user_employee.id == support_contact.id:
                     return True
-

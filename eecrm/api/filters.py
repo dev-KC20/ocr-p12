@@ -1,5 +1,4 @@
 from django.db import models
-from rest_framework import generics
 from django_filters import rest_framework as filters
 from django_filters import CharFilter
 from .models import Contract
@@ -12,12 +11,8 @@ class ContractFilter(filters.FilterSet):
     max_contract_amount = filters.NumberFilter(
         field_name="contract_amount", lookup_expr="lte"
     )
-    min_payment_due = filters.DateFilter(
-        field_name="payment_due", lookup_expr="gte"
-    )
-    max_payment_due = filters.DateFilter(
-        field_name="payment_due", lookup_expr="lte"
-    )
+    min_payment_due = filters.DateFilter(field_name="payment_due", lookup_expr="gte")
+    max_payment_due = filters.DateFilter(field_name="payment_due", lookup_expr="lte")
     # payment_due = filters.IsoDateTimeFromToRangeFilter
 
     class Meta:

@@ -7,7 +7,7 @@ from rest_framework.exceptions import ValidationError
 
 from .filters import ContractFilter
 from .models import Client, Contract, Event
-from .permissions import HasManagerRole, HasSupportRole, HasSalesRole
+from .permissions import HasSupportRole, HasSalesRole
 from .serializers import ClientSerializer, ContractSerializer, EventSerializer
 
 import base.constants as cts
@@ -59,9 +59,7 @@ class ClientViewSet(ModelViewSet):
 
         """
         # check for mandatory fields in body of request
-        target_client_company_name = get_data_or_error(
-            self.request.data, "company_name", True
-        )
+        get_data_or_error(self.request.data, "company_name", False)
         target_client_username = get_data_or_error(self.request.data, "username", True)
         target_client_password = get_data_or_error(self.request.data, "password", True)
         target_sale_contact_id = get_data_or_error(
@@ -80,7 +78,7 @@ class ClientViewSet(ModelViewSet):
 
         # provide username and password for clients
         if not (target_client_username) or not (target_client_password):
-            error_message = f"""username and password are mandatory for the client {target_client_id},
+            error_message = """username and password are mandatory for the client,
                 pls provide some."""
             raise ValidationError(error_message)
         # check if username for clients does not exists
@@ -98,9 +96,9 @@ class ClientViewSet(ModelViewSet):
             raise ValidationError(error_message)
 
         super().perform_create(serializer, *args, **kwargs)
-        cleaned_request_data=self.request.data
+        cleaned_request_data = self.request.data
         if cleaned_request_data["password"]:
-            cleaned_request_data["password"]= ""
+            cleaned_request_data["password"] = ""
         logger.info(
             f"[{datetime.now()}]: Client.add {cleaned_request_data} by {self.request.user}"
         )
@@ -117,16 +115,14 @@ class ClientViewSet(ModelViewSet):
         """
 
         # check for mandatory fields in body of request
-        target_client_company_name = get_data_or_error(
-            self.request.data, "company_name", True
-        )
+        get_data_or_error(self.request.data, "company_name", False)
         target_client_id = get_data_or_error(self.request.data, "id", True)
-        target_client_username = get_data_or_error(self.request.data, "username", True)
-        target_client_password = get_data_or_error(self.request.data, "password", True)
+        get_data_or_error(self.request.data, "username", False)
+        get_data_or_error(self.request.data, "password", False)
         target_sale_contact_id = get_data_or_error(
             self.request.data, "sale_contact", True
         )
-        target_is_prospect = get_data_or_error(self.request.data, "is_prospect", True)
+        get_data_or_error(self.request.data, "is_prospect", False)
 
         connected_user_department = User.objects.filter(id=self.request.user.id).values(
             "department"
@@ -135,7 +131,7 @@ class ClientViewSet(ModelViewSet):
         # check url & get current client
         client_pk = self.kwargs.get("pk")
         if client_pk is None or client_pk == "null":
-            error_message = f"""The url has been messed up, please try again."""
+            error_message = """The url has been messed up, please try again."""
             raise ValidationError(error_message)
         # owasp : do not temper with client in the data/url
         if target_client_id:
@@ -186,13 +182,13 @@ class ContractViewSet(ModelViewSet):
             "clients_pk"
         )  # client_pk when models Contract/Events
         if client_pk is None or client_pk == "null":
-            error_message = f"""The url has been messed up, please try again."""
+            error_message = """The url has been messed up, please try again."""
             raise ValidationError(error_message)
         # check url contract
         contract_pk = self.kwargs.get("pk")
         if contract_pk:
             if contract_pk is None or contract_pk == "null":
-                error_message = f"""The url has been messed up, please try again."""
+                error_message = """The url has been messed up, please try again."""
                 raise ValidationError(error_message)
 
         if client_pk and contract_pk:
@@ -228,7 +224,7 @@ class ContractViewSet(ModelViewSet):
         client_id = self.kwargs.get("clients_pk")
         # this is already checked thru permissions but we keep it in case we let thru to message
         if client_id is None or client_id == "null":
-            error_message = f"""The url has been messed up, please try again."""
+            error_message = """The url has been messed up, please try again."""
             raise ValidationError(error_message)
         # owasp : do not temper with client in the data
         if int(client_id) != int(target_client_id):
@@ -251,7 +247,8 @@ class ContractViewSet(ModelViewSet):
         # check client is not prospect
         target_client = Client.objects.get(id=target_client_id)
         if target_client.is_prospect:
-            error_message = f"""This client is still a prospect. Please upgrade him full client before adding contract."""
+            error_message = """This client is still a prospect.
+            Please upgrade him full client before adding contract."""
             raise ValidationError(error_message)
         super().perform_create(serializer, *args, **kwargs)
         logger.info(
@@ -273,9 +270,7 @@ class ContractViewSet(ModelViewSet):
         target_status = get_data_or_error(self.request.data, "status", True)
         get_data_or_error(self.request.data, "contract_name", False)
         get_data_or_error(self.request.data, "contract_amount", False)
-        target_payment_due_str = get_data_or_error(
-            self.request.data, "payment_due", True
-        )
+        get_data_or_error(self.request.data, "payment_due", False)
 
         target_sale_contact_id = get_data_or_error(
             self.request.data, "sale_contact", True
@@ -339,7 +334,7 @@ class EventViewSet(ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     # permission_classes = [HasSalesRole, HasSupportRole]
-    permission_classes = [HasSupportRole]
+    permission_classes = [HasSalesRole, HasSupportRole]
 
     def get_queryset(self):
         # check url client
@@ -348,21 +343,23 @@ class EventViewSet(ModelViewSet):
         )  # client_pk when models Contract/Events
         if client_pk is None or client_pk == "null":
             error_message = (
-                f"""The client part of url has been messed up, please try again."""
+                """The client part of url has been messed up, please try again."""
             )
             raise ValidationError(error_message)
         # check url contract
         contract_pk = self.kwargs.get("contracts_pk")
         if contract_pk:
             if contract_pk is None or contract_pk == "null":
-                error_message = f"""The contract part of url has been messed up, please try again."""
+                error_message = (
+                    """The contract part of url has been messed up, please try again."""
+                )
                 raise ValidationError(error_message)
         # check url event
         event_pk = self.kwargs.get("pk")
         if event_pk:
             if event_pk is None or event_pk == "null":
                 error_message = (
-                    f"""The event part of url has been messed up, please try again."""
+                    """The event part of url has been messed up, please try again."""
                 )
                 raise ValidationError(error_message)
 
@@ -394,21 +391,23 @@ class EventViewSet(ModelViewSet):
         )  # client_pk when models Contract/Events
         if client_pk is None or client_pk == "null":
             error_message = (
-                f"""The client part of url has been messed up, please try again."""
+                """The client part of url has been messed up, please try again."""
             )
             raise ValidationError(error_message)
         # check url contract
         contract_pk = self.kwargs.get("contracts_pk")
         if contract_pk:
             if contract_pk is None or contract_pk == "null":
-                error_message = f"""The contract part of url has been messed up, please try again."""
+                error_message = (
+                    """The contract part of url has been messed up, please try again."""
+                )
                 raise ValidationError(error_message)
         # check url event
 
         # check for mandatory fields in body of request
         target_event_status = get_data_or_error(self.request.data, "event_status", True)
-        target_attendees = get_data_or_error(self.request.data, "attendees", True)
-        target_date_event = get_data_or_error(self.request.data, "date_event", True)
+        get_data_or_error(self.request.data, "attendees", False)
+        get_data_or_error(self.request.data, "date_event", False)
         target_support_contact_id = get_data_or_error(
             self.request.data, "support_contact", True
         )
@@ -444,7 +443,7 @@ class EventViewSet(ModelViewSet):
             id=target_support_contact_id
         ).values("department")[0]["department"]
         if contact_user_department not in cts.SUPPORT_ENABLED_DEPARTMENT:
-            error_message = f"""The support contact shall belong to the support department, pls retry."""
+            error_message = """The support contact shall belong to the support department, pls retry."""
             raise ValidationError(error_message)
 
         super().perform_create(serializer, *args, **kwargs)
@@ -456,7 +455,7 @@ class EventViewSet(ModelViewSet):
         """body of target data to be created
         fields = ["event_status","attendees","date_event","notes","date_created",
                    "date_updated","support_contact","contract",]
-        * create
+        * update
             check user.department in ['A']
             check client url == client body
             check contract url == contract body
@@ -468,15 +467,15 @@ class EventViewSet(ModelViewSet):
         target_event_status = get_data_or_error(
             self.request.data, "event_status", False
         )
-        target_attendees = get_data_or_error(self.request.data, "attendees", False)
-        target_date_event = get_data_or_error(self.request.data, "date_event", False)
+        get_data_or_error(self.request.data, "attendees", False)
+        get_data_or_error(self.request.data, "date_event", False)
         target_support_contact_id = get_data_or_error(
             self.request.data, "support_contact", True
         )
         target_contract = get_data_or_error(self.request.data, "contract", True)
 
         # check url & get current client
-        client_pk = self.kwargs.get("clients_pk")
+        # client_pk = self.kwargs.get("clients_pk")
         contract_pk = self.kwargs.get("contract_pk")
         connected_user_department = User.objects.filter(id=self.request.user.id).values(
             "department"
@@ -489,11 +488,6 @@ class EventViewSet(ModelViewSet):
              need to be member of Support, pls work on this with the support team."""
             raise ValidationError(error_message)
 
-        # owasp : do not temper with client in the data
-        if not (int(client_pk) == int(target_client_id)):
-            error_message = f"""you are not allowed to change the client {target_client_id},
-             pls go back and select: {client_id}"""
-            raise ValidationError(error_message)
         # owasp : do not temper with contract in the data
         if contract_pk != target_contract:
             error_message = f"""you are not allowed to change the contract {target_contract},
