@@ -19,7 +19,8 @@ class ClientSerializer(ModelSerializer):
             "is_active",
             "date_created",
             "date_updated",
-            # "username",
+            "username",
+            "password",
         ]
 
 
@@ -43,6 +44,7 @@ class EventSerializer(ModelSerializer):
     class Meta:
         model = Event
         fields = [
+            "id",
             "event_status",
             "attendees",
             "date_event",

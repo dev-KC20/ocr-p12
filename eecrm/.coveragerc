@@ -1,0 +1,3 @@
+[run]
+branch = True
+omit = */tests/*,*migrations*, */__init__.py, constants.py,manage.py,base\wsgi.py,base\asgi.py

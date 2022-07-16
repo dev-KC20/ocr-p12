@@ -62,8 +62,8 @@ class CustomUserAdmin(UserAdmin):
         content_type = ContentType.objects.get_for_model(User)
         user_model_permission = Permission.objects.filter(content_type=content_type)
         # # authorise section
-        if user_role == "M":
-            # To add permissions
+        if user_role == cts.USER_MANAGEMENT:
+            # To enforce manager's permissions in case it wasn't earlier
             for perm in user_model_permission:
                 user_employee.user_permissions.add(perm)
                 logger.info(
@@ -74,10 +74,23 @@ class CustomUserAdmin(UserAdmin):
         return False
 
     def save_model(self, request, obj, form, change):
-        # if obj.is_superuser not ( request.user.is_superuser):
-        #     pass
-        obj.user = request.user
-        logger.info(f"[{datetime.now()}]: User.Create|Update {obj.username} by {request.user.username}")
+
+        # only manager are staff member & User is the lone obj managed in Admin
+        if isinstance(obj, User):
+            content_type = ContentType.objects.get_for_model(User)
+            user_model_permission = Permission.objects.filter(content_type=content_type)
+            if obj.department == cts.USER_MANAGEMENT or obj.is_superuser:
+                obj.is_staff = True
+                # To add permissions
+                for perm in user_model_permission:
+                    obj.user_permissions.add(perm)
+                    logger.info(
+                        f"[{datetime.now()}]: Admin site {obj} had {perm} checked by {request.user.username}"
+                    )
+            elif obj.department in cts.NOT_MANAGING_ENABLED_DEPARTMENT:
+                obj.is_staff = False
+            # obj = request.user
+            logger.info(f"[{datetime.now()}]: User.Create|Update {obj.username} by {request.user.username}")
         super().save_model(request, obj, form, change)
 
 
@@ -106,14 +119,13 @@ class LogEntryAdmin(admin.ModelAdmin):
     ]
     # only superuser can read the history
     def has_add_permission(self, request):
-        return False
+        return request.user.is_superuser
 
     def has_change_permission(self, request, obj=None):
-        return False
+        return request.user.is_superuser
 
     def has_delete_permission(self, request, obj=None):
-        return False
+        return request.user.is_superuser
 
     def has_view_permission(self, request, obj=None):
         return request.user.is_superuser
-        # return True

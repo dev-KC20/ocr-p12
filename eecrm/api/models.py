@@ -1,7 +1,7 @@
 import base.constants as cts
 from django.contrib.auth import get_user_model
 from django.core.validators import RegexValidator
-from django.db import models
+from django.db import models, IntegrityError
 
 # from django.conf import settings
 
@@ -9,7 +9,7 @@ from users.models import User
 
 # User = get_user_model()
 
-# print('settings.AUTH_USER_MODEL',settings.AUTH_USER_MODEL)
+
 def get_sentinel_user():
     # for RGPD & others reasons when a contributor is deleted one want to keep projects, issues or comments
     return get_user_model().objects.get_or_create(username="deletedUser")[0]
@@ -23,7 +23,9 @@ class Client(User):
         null=False,
     )
     company_name = models.CharField(max_length=128, blank=False, null=False)
-    company_phone = models.CharField(validators=[phone_number], max_length=16, blank=True)
+    company_phone = models.CharField(
+        validators=[phone_number], max_length=16, blank=True
+    )
     company_mobile = models.CharField(
         validators=[phone_number],
         max_length=16,
@@ -44,12 +46,20 @@ class Client(User):
         if user.password is not None and user.password != "":
             user.set_password(self.password)
         if user.username is not None:
-            user.save(*args, **kwargs)
+            try:
+                # in case instance is not unique
+                user.save(*args, **kwargs)
+            except IntegrityError:
+                raise IntegrityError(
+                    f"The Client username should be unique, pls change {user.username}."
+                )
 
 
 class Contract(models.Model):
     # true stands for when contract is signed else a draft
-    status = models.BooleanField(default=False, blank=False, null=False, verbose_name="signed")
+    status = models.BooleanField(
+        default=False, blank=False, null=False, verbose_name="signed"
+    )
     contract_name = models.CharField(max_length=128, blank=False, null=False)
     contract_amount = models.FloatField()
     payment_due = models.DateTimeField()
@@ -72,22 +82,22 @@ class Contract(models.Model):
 
 class Event(models.Model):
 
-    OPEN = "C"
-    WIP = "E"
-    CLOSED = "T"
-    EVENT_PROGRESS_STATUS = [
-        (OPEN, "Créé"),
-        (WIP, "En cours"),
-        (CLOSED, "Terminé"),
-    ]
+  
     event_status = models.CharField(
         max_length=1,
-        choices=EVENT_PROGRESS_STATUS,
-        default=OPEN,
-        blank=False, null=False,
+        choices=cts.EVENT_PROGRESS_STATUS,
+        default=cts.EVENT_OPEN,
+        blank=False,
+        null=False,
     )
-    attendees = models.IntegerField(default=50, null=False,)
-    date_event = models.DateTimeField(blank=False, null=False,)
+    attendees = models.IntegerField(
+        default=50,
+        null=False,
+    )
+    date_event = models.DateTimeField(
+        blank=False,
+        null=False,
+    )
     notes = models.CharField(max_length=1024, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
@@ -105,3 +115,6 @@ class Event(models.Model):
 
     def __str__(self):
         return f"The {self.contract.contract_name} event on {self.date_event} with {self.attendees} attendees"
+
+    def get_event_attendees(self):
+        return self.attendees

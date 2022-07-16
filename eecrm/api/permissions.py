@@ -26,7 +26,11 @@ from .models import Client, Contract, Event
 
 
 class HasManagerRole(BasePermission):
-    """return True if a manager is authorized to CRUDL view/serializer
+    """
+    
+    NOT USED AS IS
+    
+    return True if a manager is authorized to CRUDL view/serializer
     and all objects
 
 
@@ -53,14 +57,13 @@ class HasManagerRole(BasePermission):
 
         # authorise section
         # let superuser be superuser == have full access as well as managment
-        if (request.user.is_superuser) or (user_role == "M"):
+        if (request.user.is_superuser) or (user_role == cts.USER_MANAGEMENT):
             return True
 
 
 class HasSalesRole(BasePermission):
     """return True if a salesman is authorized to view/serializer
     and all objects
-
 
     |dep./object  |	User      |  Customer | Contract |	Event    |
     |-------------|-----------|-----------|----------|-----------|
@@ -101,7 +104,7 @@ class HasSalesRole(BasePermission):
 
         # authorise section
         # let superuser be superuser == have full access as well as managment
-        if (request.user.is_superuser) or (user_role == "M"):
+        if (request.user.is_superuser) or (user_role == cts.USER_MANAGEMENT):
             return True
         # all authenticated employees can read all obj
         if request.method in cts.READ_METHODS:
@@ -150,6 +153,9 @@ class HasSupportRole(BasePermission):
 
     def has_permission(self, request, view):
         # for accessing an api view one needs at least to be authenticated
+        # get the request user department
+        user_employee = User.objects.get(id=request.user.id)
+        user_role = user_employee.department
         # the support guy is the only one not allowed to [C]reate actions
         if (not request.user.is_superuser) and (user_role == "A") and (view.action == "create"):
             return False
@@ -179,7 +185,7 @@ class HasSupportRole(BasePermission):
 
         # authorise section
         # let superuser be superuser == have full access as well as managment
-        if (request.user.is_superuser) or (user_role == "M"):
+        if (request.user.is_superuser) or (user_role == cts.USER_MANAGEMENT):
             return True
         # all authenticated employees can read all obj
         if request.method in cts.READ_METHODS:

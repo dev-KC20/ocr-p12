@@ -1,7 +1,5 @@
+# conftest.py
 """ create a test DB by copy of the actual one
-
-
-
 
 [(c)](https://pytest-django.readthedocs.io/en/latest/database.html?highlight=create%20database#using-a-template-database-for-tests) 
 
@@ -23,6 +21,7 @@ def run_sql(sql):
 
 
 @pytest.fixture(scope="session")
+# @pytest.fixture(scope="function")
 def django_db_setup():
     from django.conf import settings
 
