@@ -1,0 +1,1026 @@
+
+[2022-07-15 21:13:02] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 7766
+[2022-07-15 21:13:02] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:13:02] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-15 21:13:02] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 62602)
+
+[2022-07-15 21:13:12] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 302 0
+[2022-07-15 21:13:12] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/4/change/ HTTP/1.1" 200 12750
+[2022-07-15 21:13:12] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:13:12] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-15 21:13:12] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 64991)
+
+[2022-07-15 21:13:54] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/4/change/ HTTP/1.1" 302 0
+[2022-07-15 21:13:54] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10871
+[2022-07-15 21:13:54] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:13:54] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-15 21:13:54] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 53212)
+
+[2022-07-15 21:14:08] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:14:08] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:14:09] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-15 21:14:09] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 50566)
+
+[2022-07-15 21:14:36] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:14:36] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10870
+[2022-07-15 21:14:36] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:14:42] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10664
+[2022-07-15 21:14:42] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:15:41] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:15:41] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:18:10] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:18:34] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10870
+[2022-07-15 21:18:34] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:18:49] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:18:50] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:21:20] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\users\forms.py changed, reloading.
+[2022-07-15 21:21:36] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:22:03] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:22:03] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10870
+[2022-07-15 21:22:03] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:22:09] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:22:09] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:22:52] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:22:55] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10870
+[2022-07-15 21:22:56] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:23:25] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/1/change/ HTTP/1.1" 200 12559
+[2022-07-15 21:23:26] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:24:32] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\users\admin.py changed, reloading.
+[2022-07-15 21:24:37] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/1/change/ HTTP/1.1" 302 0
+[2022-07-15 21:24:38] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10868
+[2022-07-15 21:24:38] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:24:46] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:24:52] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/1/change/ HTTP/1.1" 200 12559
+[2022-07-15 21:24:52] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:26:57] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10664
+[2022-07-15 21:26:57] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:27:04] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:27:04] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:27:51] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 63918)
+
+[2022-07-15 21:28:47] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:28:47] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 302 0
+[2022-07-15 21:28:50] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/users/user/ HTTP/1.1" 200 2612
+[2022-07-15 21:29:26] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/users/user/ HTTP/1.1" 200 2570
+[2022-07-15 21:29:41] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/users/user/ HTTP/1.1" 200 2570
+[2022-07-15 21:30:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:32:44] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:32:49] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/users/user/ HTTP/1.1" 200 2570
+[2022-07-15 21:35:29] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\users\admin.py changed, reloading.
+[2022-07-15 21:35:31] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:35:37] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\users\admin.py changed, reloading.
+[2022-07-15 21:36:20] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:43:50] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:43:53] INFO [django.server.log_message:187] "GET /hidden-admin HTTP/1.1" 301 0
+[2022-07-15 21:43:53] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 200 7214
+[2022-07-15 21:43:53] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 65267)
+
+[2022-07-15 21:43:56] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:43:57] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:43:57] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-15 21:44:01] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:44:01] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10665
+[2022-07-15 21:44:01] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:44:07] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/1/change/ HTTP/1.1" 200 12566
+[2022-07-15 21:44:07] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 65311)
+
+[2022-07-15 21:44:07] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:44:21] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/1/change/ HTTP/1.1" 302 0
+[2022-07-15 21:44:22] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10879
+[2022-07-15 21:44:22] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:44:26] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12520
+[2022-07-15 21:44:26] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:44:53] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/3/change/ HTTP/1.1" 302 0
+[2022-07-15 21:44:54] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10899
+[2022-07-15 21:44:54] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:45:03] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/4/change/ HTTP/1.1" 200 12512
+[2022-07-15 21:45:03] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:45:39] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/4/change/ HTTP/1.1" 302 0
+[2022-07-15 21:45:39] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10920
+[2022-07-15 21:45:39] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:45:47] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:45:48] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:45:49] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-15 21:45:54] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:45:55] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 9573
+[2022-07-15 21:45:55] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:45:57] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 11450
+[2022-07-15 21:45:57] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:46:05] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:46:06] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:46:06] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-15 21:46:10] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:46:10] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10713
+[2022-07-15 21:46:10] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:46:13] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 7762
+[2022-07-15 21:46:13] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:46:25] ERROR [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 500 156425
+[2022-07-15 21:47:00] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\users\forms.py changed, reloading.
+[2022-07-15 21:47:03] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-15 21:47:07] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 7762
+[2022-07-15 21:47:07] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 57014)
+[2022-07-15 21:47:13] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:47:15] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:47:15] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-15 21:47:19] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:47:19] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10713
+[2022-07-15 21:47:19] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:47:23] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 7762
+[2022-07-15 21:47:23] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:47:32] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 302 0
+[2022-07-15 21:47:32] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/5/change/ HTTP/1.1" 200 12746
+[2022-07-15 21:47:32] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:48:02] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/5/change/ HTTP/1.1" 302 0
+[2022-07-15 21:48:03] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 8001
+[2022-07-15 21:48:03] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:48:12] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 302 0
+[2022-07-15 21:48:12] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/6/change/ HTTP/1.1" 200 12751
+[2022-07-15 21:48:12] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:48:54] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/6/change/ HTTP/1.1" 302 0
+[2022-07-15 21:48:54] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 12190
+[2022-07-15 21:48:54] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:49:04] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:49:06] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:49:06] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-15 21:49:11] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-15 21:49:11] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 10842
+[2022-07-15 21:49:12] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:49:14] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 6622
+[2022-07-15 21:49:14] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:49:23] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 302 0
+[2022-07-15 21:49:24] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/7/change/ HTTP/1.1" 200 11621
+[2022-07-15 21:49:24] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:51:38] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/7/change/ HTTP/1.1" 302 0
+[2022-07-15 21:51:38] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/add/ HTTP/1.1" 200 6864
+[2022-07-15 21:51:39] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:51:51] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/add/ HTTP/1.1" 302 0
+[2022-07-15 21:51:52] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/8/change/ HTTP/1.1" 200 11626
+[2022-07-15 21:51:52] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:52:19] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/8/change/ HTTP/1.1" 302 0
+[2022-07-15 21:52:19] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 12346
+[2022-07-15 21:52:20] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-15 21:52:27] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-15 21:55:23] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:23] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:24] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:24] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:25] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:25] INFO [django.server.log_message:187] "POST /api/v1/users/refresh/ HTTP/1.1" 200 241
+[2022-07-15 21:55:25] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:55:25] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 52
+[2022-07-15 21:55:25] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-15 21:55:25] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 62
+[2022-07-15 21:56:07] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:56:13] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:56:22] INFO [django.server.log_message:187] "POST /api/v1/users/refresh/ HTTP/1.1" 200 241
+[2022-07-15 21:56:28] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 21:56:35] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 52
+[2022-07-15 21:56:50] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-15 21:56:50] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 62
+[2022-07-15 21:57:08] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-15 21:57:08] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 75
+[2022-07-15 21:57:36] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-15 21:57:36] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 75
+[2022-07-15 21:57:46] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 326
+[2022-07-15 21:58:45] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 378
+[2022-07-15 21:59:20] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 21:59:20] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:00:02] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:00:02] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:05:21] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 22:05:24] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:05:24] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:05:37] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 22:05:41] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:05:41] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:05:52] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 22:05:56] INFO [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 200 326
+[2022-07-15 22:07:10] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-15 22:07:16] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:07:16] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:10:07] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:10:07] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:17:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-15 22:23:21] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/9/
+[2022-07-15 22:23:21] WARNING [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 403 63
+[2022-07-15 22:23:24] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 09:03:45] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 09:04:16] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 09:06:52] INFO [django.server.log_message:187] "GET /api/v1/clients/9/ HTTP/1.1" 200 326
+[2022-07-16 09:10:37] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/9/
+[2022-07-16 09:10:37] WARNING [django.server.log_message:187] "PUT /api/v1/clients/9/ HTTP/1.1" 400 62
+[2022-07-16 09:11:06] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/9/
+[2022-07-16 09:11:06] WARNING [django.server.log_message:187] "PUT /api/v1/clients/9/ HTTP/1.1" 400 70
+[2022-07-16 09:12:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/9/
+[2022-07-16 09:12:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/9/ HTTP/1.1" 400 70
+[2022-07-16 09:13:36] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/9/
+[2022-07-16 09:13:36] WARNING [django.server.log_message:187] "PUT /api/v1/clients/9/ HTTP/1.1" 400 93
+[2022-07-16 09:14:15] ERROR [django.request.log_response:241] Internal Server Error: /api/v1/clients/
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: ERREUR:  la valeur d'une cl� dupliqu�e rompt la contrainte unique � users_user_username_key �
+DETAIL:  La cl� � (username)=() � existe d�j�.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\models.py", line 51, in save
+    user.save(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\base.py", line 856, in save_base
+    parent_inserted = self._save_parents(cls, using, update_fields)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\base.py", line 898, in _save_parents
+    updated = self._save_table(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: ERREUR:  la valeur d'une cl� dupliqu�e rompt la contrainte unique � users_user_username_key �
+DETAIL:  La cl� � (username)=() � existe d�j�.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py", line 100, in perform_create
+    super().perform_create(serializer, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\models.py", line 53, in save
+    raise IntegrityError(
+django.db.utils.IntegrityError: The Client username should be unique, pls change .
+[2022-07-16 09:14:15] ERROR [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 500 234639
+[2022-07-16 09:25:11] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 09:25:15] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 09:25:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 09:25:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:04:45] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:04:50] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:11] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:17] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:20] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:25] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:29] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:32] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:35] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:44] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:47] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:05:50] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:05:53] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:06:12] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:06:38] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 10:13:03] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\serializers.py changed, reloading.
+[2022-07-16 10:13:41] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:14:10] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 455
+[2022-07-16 10:14:34] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-16 10:14:34] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-16 10:21:40] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:21:42] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:22:50] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:22:53] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:23:44] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:23:47] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:23:51] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:23:54] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:23:59] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:24:02] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:24:04] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:24:07] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:24:17] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:24:19] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:25:10] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:25:12] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:25:21] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:25:24] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:27:06] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:27:08] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:27:18] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:27:20] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:27:24] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:27:27] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:28:11] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:28:14] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:32:38] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:32:40] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:32:43] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:32:46] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:33:42] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:33:45] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:33:48] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:33:51] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:34:12] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:34:15] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:34:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:34:26] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:34:30] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:34:33] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:34:43] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:34:46] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:35:00] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:35:03] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:35:21] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:35:23] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:35:27] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:35:30] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:35:41] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:35:44] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:35:55] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:35:59] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:36:04] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:36:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:36:10] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:36:14] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:36:42] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:36:45] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:36:58] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:01] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:37:02] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/null/
+[2022-07-16 10:37:02] WARNING [django.server.log_message:187] "PUT /api/v1/clients/null/ HTTP/1.1" 401 183
+[2022-07-16 10:37:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:37:28] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:30] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:37:37] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:39] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:37:44] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:47] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:37:50] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:37:53] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:38:44] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 10:41:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:41:12] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:41:29] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:41:32] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:41:34] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:41:37] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:41:47] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:41:50] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:42:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:42:11] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:42:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:42:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:42:30] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:42:33] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:42:36] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:42:39] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:43:00] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:43:04] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:43:10] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:43:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:43:18] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:43:20] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:43:33] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:43:37] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:43:55] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:43:58] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:44:03] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:44:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:44:11] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:44:15] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:44:17] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:44:21] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:44:39] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 10:44:39] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/ HTTP/1.1" 400 49
+[2022-07-16 10:45:29] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/null/
+[2022-07-16 10:45:29] WARNING [django.server.log_message:187] "PUT /api/v1/clients/null/contracts/null/ HTTP/1.1" 400 49
+[2022-07-16 10:46:36] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-16 10:46:36] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-16 10:48:12] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 444
+[2022-07-16 10:49:10] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/
+[2022-07-16 10:49:10] WARNING [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 400 49
+[2022-07-16 10:51:38] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:51:41] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:51:45] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:51:48] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:51:53] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:51:56] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:53:54] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:53:58] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:54:05] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 10:54:08] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 10:54:22] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 200 52
+[2022-07-16 10:55:52] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/
+[2022-07-16 10:55:52] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/ HTTP/1.1" 400 118
+[2022-07-16 10:56:33] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/
+[2022-07-16 10:56:33] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/ HTTP/1.1" 400 91
+[2022-07-16 10:58:13] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/
+[2022-07-16 10:58:13] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/ HTTP/1.1" 400 64
+[2022-07-16 10:59:32] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/
+[2022-07-16 10:59:32] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/ HTTP/1.1" 400 73
+[2022-07-16 11:00:08] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/
+[2022-07-16 11:00:08] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/ HTTP/1.1" 400 93
+[2022-07-16 11:00:20] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/
+[2022-07-16 11:00:20] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/ HTTP/1.1" 400 79
+[2022-07-16 11:02:24] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 11:02:28] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:02:40] INFO [django.server.log_message:187] "PUT /api/v1/clients/12/ HTTP/1.1" 200 445
+[2022-07-16 11:04:23] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 200 52
+[2022-07-16 11:04:48] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 200 52
+[2022-07-16 11:05:22] INFO [django.server.log_message:187] "POST /api/v1/clients/12/contracts/ HTTP/1.1" 201 260
+[2022-07-16 11:07:06] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:07:06] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 403 63
+[2022-07-16 11:24:14] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/12/contracts/
+[2022-07-16 11:24:14] WARNING [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 401 183
+[2022-07-16 11:24:21] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 11:24:25] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/ HTTP/1.1" 200 312
+[2022-07-16 11:28:07] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:28:07] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 403 63
+[2022-07-16 11:29:58] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 11:30:00] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:34:22] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-16 11:34:25] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:34:29] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-16 11:34:32] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:34:34] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-16 11:34:37] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:35:13] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-16 11:35:16] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:41:09] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:41:09] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 45
+[2022-07-16 11:41:39] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:41:39] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 121
+[2022-07-16 11:43:52] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:43:52] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 43
+[2022-07-16 11:44:18] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:44:18] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 121
+[2022-07-16 11:44:58] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:44:58] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 43
+[2022-07-16 11:46:20] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 11:46:23] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:47:50] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/
+[2022-07-16 11:47:50] WARNING [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 400 121
+[2022-07-16 11:48:48] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 11:48:51] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 11:48:53] INFO [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 200 260
+[2022-07-16 11:50:26] INFO [django.server.log_message:187] "PUT /api/v1/clients/12/contracts/1/ HTTP/1.1" 200 259
+[2022-07-16 11:51:32] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 200 52
+[2022-07-16 12:28:15] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 12:28:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 12:28:40] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 12:28:43] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 12:28:47] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 12:28:47] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 92
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/css/login.css HTTP/1.1" 200 954
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18575
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2022-07-16 13:46:54] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2022-07-16 13:46:54] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-16 13:46:54] WARNING [django.server.log_message:187] "GET /favicon.ico HTTP/1.1" 404 2222
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 15205
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6932
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2022-07-16 13:47:16] INFO [django.server.log_message:187] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2022-07-16 13:47:17] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/1/change/ HTTP/1.1" 200 12585
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /static/admin/css/forms.css HTTP/1.1" 200 8878
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+[2022-07-16 13:47:21] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:47:28] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 15205
+[2022-07-16 13:47:30] INFO [django.server.log_message:187] "GET /hidden-admin/admin/logentry/ HTTP/1.1" 200 19001
+[2022-07-16 13:47:30] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:47:35] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 15205
+[2022-07-16 13:48:03] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-16 13:48:05] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 13:48:05] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-16 13:48:10] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2408
+[2022-07-16 13:48:30] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2407
+[2022-07-16 13:48:41] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 13:48:41] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 14065
+[2022-07-16 13:48:41] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:49:24] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/ HTTP/1.1" 200 4357
+[2022-07-16 13:49:24] INFO [django.server.log_message:187] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[2022-07-16 13:49:33] INFO [django.server.log_message:187] "POST /hidden-admin/users/user/ HTTP/1.1" 302 0
+[2022-07-16 13:49:34] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 13560
+[2022-07-16 13:49:34] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:49:37] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/1/change/ HTTP/1.1" 200 11445
+[2022-07-16 13:49:38] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 13:49:41] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-16 14:05:53] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:05:53] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 401 183
+[2022-07-16 14:05:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 14:06:06] INFO [django.server.log_message:187] "GET /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 200 52
+[2022-07-16 14:06:19] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:06:19] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 92
+[2022-07-16 14:06:43] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:06:43] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 92
+[2022-07-16 14:13:36] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:13:39] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:14:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:14:25] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:14:34] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:14:36] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:14:42] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:14:45] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:15:03] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:15:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:15:10] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:15:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:15:17] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:15:20] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:15:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:15:27] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:22:16] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:22:16] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 92
+[2022-07-16 14:23:14] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:23:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:23:21] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:23:24] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:23:28] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:23:31] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:23:35] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:23:38] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:23:42] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:23:45] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:24:54] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:24:57] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:25:03] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:25:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:25:15] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:25:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:25:33] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:25:36] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:25:38] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:25:42] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:26:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:27:00] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:29:04] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:29:31] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:31:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 14:31:40] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:31:40] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 89
+[2022-07-16 14:31:43] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 14:40:10] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:40:10] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 74
+[2022-07-16 14:41:09] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:41:09] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 401 183
+[2022-07-16 14:41:15] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 14:41:24] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/12/contracts/1/events/
+[2022-07-16 14:41:24] WARNING [django.server.log_message:187] "POST /api/v1/clients/12/contracts/1/events/ HTTP/1.1" 400 74
+[2022-07-16 15:20:35] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:21:17] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:17] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:18] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:18] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:18] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:19] INFO [django.server.log_message:187] "POST /api/v1/users/refresh/ HTTP/1.1" 200 241
+[2022-07-16 15:21:19] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:19] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 953
+[2022-07-16 15:21:19] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-16 15:21:19] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-16 15:21:20] ERROR [django.request.log_response:241] Internal Server Error: /api/v1/clients/null/
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'null'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py", line 47, in get_queryset
+    self.queryset = Client.objects.filter(id=client_id)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'null'.
+[2022-07-16 15:21:20] ERROR [django.server.log_message:187] "GET /api/v1/clients/null/ HTTP/1.1" 500 161906
+[2022-07-16 15:21:20] ERROR [django.request.log_response:241] Internal Server Error: /api/v1/clients/null/
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'null'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py", line 47, in get_queryset
+    self.queryset = Client.objects.filter(id=client_id)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\sql\query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'null'.
+[2022-07-16 15:21:20] ERROR [django.server.log_message:187] "PUT /api/v1/clients/null/ HTTP/1.1" 500 162314
+[2022-07-16 15:21:20] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:20] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/ HTTP/1.1" 400 49
+[2022-07-16 15:21:20] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:20] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/?contract_name=th HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/?min_payment_due=2023-09-03&max_payment_due=2024-08-03 HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/?client__email=emustikos@tesla.org HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/?min_contract_amount=10001 HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "POST /api/v1/clients/null/contracts/ HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/null/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/null/contracts/null/ HTTP/1.1" 400 49
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/null/events/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "GET /api/v1/clients/null/contracts/null/events/ HTTP/1.1" 400 64
+[2022-07-16 15:21:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/null/contracts/null/events/
+[2022-07-16 15:21:21] WARNING [django.server.log_message:187] "POST /api/v1/clients/null/contracts/null/events/ HTTP/1.1" 400 44
+[2022-07-16 15:21:22] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:21:22] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:28:05] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:28:08] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:28:31] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:28:34] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:29:36] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:29:41] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:30:10] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:30:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:30:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:30:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:30:36] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:30:39] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:30:41] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:30:44] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:30:48] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:30:51] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:31:03] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:31:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:31:11] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:31:14] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:31:27] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 15:33:55] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 15:35:16] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 15:35:55] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 953
+[2022-07-16 15:37:20] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-16 15:37:20] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-16 15:38:23] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 444
+[2022-07-16 15:43:25] INFO [django.server.log_message:187] "GET /api/v1/clients/13/ HTTP/1.1" 200 444
+[2022-07-16 15:43:51] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/13/
+[2022-07-16 15:43:51] WARNING [django.server.log_message:187] "PUT /api/v1/clients/13/ HTTP/1.1" 400 58
+[2022-07-16 15:45:34] INFO [django.server.log_message:187] "PUT /api/v1/clients/13/ HTTP/1.1" 200 446
+[2022-07-16 15:45:59] INFO [django.server.log_message:187] "GET /api/v1/clients/13/ HTTP/1.1" 200 446
+[2022-07-16 15:46:13] INFO [django.server.log_message:187] "GET /api/v1/clients/13/contracts/ HTTP/1.1" 200 52
+[2022-07-16 15:46:34] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 1400
+[2022-07-16 15:47:05] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/13/contracts/
+[2022-07-16 15:47:05] WARNING [django.server.log_message:187] "POST /api/v1/clients/13/contracts/ HTTP/1.1" 400 89
+[2022-07-16 15:47:16] INFO [django.server.log_message:187] "POST /api/v1/clients/13/contracts/ HTTP/1.1" 201 260
+[2022-07-16 15:47:43] INFO [django.server.log_message:187] "GET /api/v1/clients/13/contracts/?min_contract_amount=10001 HTTP/1.1" 200 312
+[2022-07-16 15:47:51] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/13/contracts/2/
+[2022-07-16 15:47:51] WARNING [django.server.log_message:187] "PUT /api/v1/clients/13/contracts/2/ HTTP/1.1" 400 89
+[2022-07-16 15:48:01] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/13/contracts/2/
+[2022-07-16 15:48:01] WARNING [django.server.log_message:187] "PUT /api/v1/clients/13/contracts/2/ HTTP/1.1" 400 89
+[2022-07-16 15:48:12] INFO [django.server.log_message:187] "PUT /api/v1/clients/13/contracts/2/ HTTP/1.1" 200 259
+[2022-07-16 15:49:28] INFO [django.server.log_message:187] "GET /api/v1/clients/13/contracts/2/events/ HTTP/1.1" 200 52
+[2022-07-16 15:49:59] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/13/contracts/2/events/
+[2022-07-16 15:49:59] WARNING [django.server.log_message:187] "POST /api/v1/clients/13/contracts/2/events/ HTTP/1.1" 400 74
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/css/login.css HTTP/1.1" 200 954
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18575
+[2022-07-16 16:02:49] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2022-07-16 16:02:50] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2022-07-16 16:02:50] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-16 16:02:50] WARNING [django.server.log_message:187] "GET /favicon.ico HTTP/1.1" 404 2222
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 15211
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6932
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2022-07-16 16:02:56] INFO [django.server.log_message:187] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2022-07-16 16:02:57] INFO [django.server.log_message:187] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/3/change/ HTTP/1.1" 200 12590
+[2022-07-16 16:04:00] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 60634)
+
+[2022-07-16 16:04:00] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 60632)
+
+[2022-07-16 16:04:00] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 50388)
+
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /static/admin/css/forms.css HTTP/1.1" 200 8878
+[2022-07-16 16:04:00] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 60636)
+
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492
+[2022-07-16 16:04:00] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 16:04:00] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-07-16 16:04:00] INFO [django.server.handle_error:80] - Broken pipe from ('127.0.0.1', 60635)
+
+[2022-07-16 16:04:14] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-16 16:04:16] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 16:04:17] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-16 16:04:22] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 16:04:22] INFO [django.server.log_message:187] "GET /hidden-admin/users/user/ HTTP/1.1" 200 14071
+[2022-07-16 16:04:23] INFO [django.server.log_message:187] "GET /hidden-admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-07-16 16:04:27] INFO [django.server.log_message:187] "GET /hidden-admin/logout/ HTTP/1.1" 200 1548
+[2022-07-16 16:04:29] INFO [django.server.log_message:187] "GET /hidden-admin/ HTTP/1.1" 302 0
+[2022-07-16 16:04:29] INFO [django.server.log_message:187] "GET /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2240
+[2022-07-16 16:04:33] INFO [django.server.log_message:187] "POST /hidden-admin/login/?next=/hidden-admin/ HTTP/1.1" 200 2407
+[2022-07-16 16:05:16] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 16:05:37] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 1400
+[2022-07-16 16:06:18] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 447
+[2022-07-16 17:42:01] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 17:42:01] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 401 183
+[2022-07-16 17:42:06] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 17:42:22] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 17:42:22] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 400 74
+[2022-07-16 18:40:16] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 18:40:16] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 401 183
+[2022-07-16 18:40:25] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 18:40:37] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 18:40:37] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 400 74
+[2022-07-16 18:43:03] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 18:45:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 18:45:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 18:45:48] INFO [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 201 234
+[2022-07-16 18:46:48] INFO [django.server.log_message:187] "GET /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 200 286
+[2022-07-16 18:47:14] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 18:47:14] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 400 49
+[2022-07-16 18:48:06] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 18:48:06] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 400 79
+[2022-07-16 18:55:01] ERROR [django.request.log_response:241] Internal Server Error: /api/v1/clients/14/contracts/2/events/null
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/clients/14/contracts/2/events/null/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2022-07-16 18:55:01] ERROR [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null HTTP/1.1" 500 76867
+[2022-07-16 18:55:54] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/null/
+[2022-07-16 18:55:54] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null/ HTTP/1.1" 400 63
+[2022-07-16 18:57:06] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 18:57:06] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 400 79
+[2022-07-16 18:57:30] INFO [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 201 235
+[2022-07-16 19:03:31] INFO [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 201 235
+[2022-07-16 19:03:58] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/3/
+[2022-07-16 19:03:58] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/3/ HTTP/1.1" 403 63
+[2022-07-16 19:04:48] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 19:04:52] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/null/
+[2022-07-16 19:04:52] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null/ HTTP/1.1" 400 63
+[2022-07-16 19:05:16] INFO [django.server.log_message:187] "GET /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 200 758
+[2022-07-16 19:06:32] WARNING [django.request.log_response:241] Not Found: /api/v1/clients/14/contracts/2/events/11/
+[2022-07-16 19:06:32] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/11/ HTTP/1.1" 404 23
+[2022-07-16 19:07:05] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:07:05] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:08:02] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/null/
+[2022-07-16 19:08:02] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null/ HTTP/1.1" 400 63
+[2022-07-16 19:10:16] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:10:16] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:10:59] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:10:59] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:11:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 19:12:06] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:12:06] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:12:44] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:13:01] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:13:01] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:16:49] INFO [django.server.log_message:187] "GET /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 200 758
+[2022-07-16 19:18:13] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:18:13] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:19:34] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 19:19:37] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:20:36] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:20:50] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:20:50] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:22:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 19:22:12] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:23:34] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:23:34] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:23:51] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:23:51] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:24:22] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/
+[2022-07-16 19:24:22] WARNING [django.server.log_message:187] "POST /api/v1/clients/14/contracts/2/events/ HTTP/1.1" 403 63
+[2022-07-16 19:24:30] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/null/
+[2022-07-16 19:24:30] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null/ HTTP/1.1" 400 63
+[2022-07-16 19:24:57] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:26:51] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/14/contracts/2/events/null/
+[2022-07-16 19:26:51] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/null/ HTTP/1.1" 400 63
+[2022-07-16 19:36:42] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-16 19:36:44] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/14/contracts/2/events/1/
+[2022-07-16 19:36:44] WARNING [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 403 63
+[2022-07-16 19:36:47] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 19:37:34] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 19:37:56] ERROR [django.request.log_response:241] Internal Server Error: /api/v1/clients/14/contracts/2/events/1/
+Traceback (most recent call last):
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Local\dev\python\ocr\ocr-p12\ENV\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py", line 490, in perform_update
+    if not (int(client_id) == int(target_client_id)):
+NameError: name 'client_id' is not defined
+[2022-07-16 19:37:56] ERROR [django.server.log_message:187] "PUT /api/v1/clients/14/contracts/2/events/1/ HTTP/1.1" 500 108613
+[2022-07-16 19:39:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 19:39:12] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:25:06] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:25:09] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:25:47] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:25:49] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:25:52] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:25:55] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:25:58] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:01] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:04] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:07] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:16] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:19] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:22] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:25] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:48] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:51] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:53] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:26:56] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:26:58] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:27:01] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:27:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:27:10] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:27:20] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-16 20:27:23] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:36:58] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-16 20:37:54] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-16 20:37:54] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 76
+[2022-07-16 20:38:28] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 449
+[2022-07-16 20:41:50] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\base\settings.py changed, reloading.
+[2022-07-16 20:41:53] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:42:28] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\base\settings.py changed, reloading.
+[2022-07-16 20:42:30] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:42:30] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-16 20:42:30] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-16 20:43:02] INFO [api.views.perform_create:104] [2022-07-16 20:43:02.294563]: Client.add {'password': '', 'username': 'topniceclient2', 'company_name': 'theneedle&dammagedone', 'sale_contact': 6, 'first_name': 'Paul', 'last_name': 'Simon2', 'email': 'ps2@song.org', 'company_phone': '+4458667688', 'company_mobile': '+4451165688'} by oc-salesman2
+[2022-07-16 20:43:02] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456
+[2022-07-16 20:43:02] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456

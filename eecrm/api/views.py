@@ -36,15 +36,13 @@ class ClientViewSet(ModelViewSet):
     def get_queryset(self):
         # filter the url shown to employees depending on action/method
         # self.action == 'list'
-        # if self.request.method not in cts.READ_METHODS:
+        client_pk = self.kwargs.get("pk")
         connected_user_department = User.objects.filter(id=self.request.user.id).values(
             "department"
         )[0]["department"]
         if connected_user_department != cts.USER_EXTERNAL:
-            client_id = self.kwargs.get("pk")
-
-            if client_id:
-                self.queryset = Client.objects.filter(id=client_id)
+            if not (client_pk is None or client_pk == "null"):
+                self.queryset = Client.objects.filter(id=client_pk)
             else:
                 self.queryset = Client.objects.all()
         else:
@@ -100,8 +98,11 @@ class ClientViewSet(ModelViewSet):
             raise ValidationError(error_message)
 
         super().perform_create(serializer, *args, **kwargs)
+        cleaned_request_data=self.request.data
+        if cleaned_request_data["password"]:
+            cleaned_request_data["password"]= ""
         logger.info(
-            f"[{datetime.now()}]: Client.add {self.request.data} by {self.request.user}"
+            f"[{datetime.now()}]: Client.add {cleaned_request_data} by {self.request.user}"
         )
 
     def perform_update(self, serializer, *args, **kwargs):
@@ -181,14 +182,16 @@ class ContractViewSet(ModelViewSet):
         # if self.request.method not in cts.READ_METHODS:
 
         # check url client
-        client_pk = self.kwargs.get("clients_pk") #client_pk when models Contract/Events
-        if client_pk is None or client_pk == 'null':
+        client_pk = self.kwargs.get(
+            "clients_pk"
+        )  # client_pk when models Contract/Events
+        if client_pk is None or client_pk == "null":
             error_message = f"""The url has been messed up, please try again."""
             raise ValidationError(error_message)
         # check url contract
         contract_pk = self.kwargs.get("pk")
         if contract_pk:
-            if contract_pk is None or contract_pk == 'null':
+            if contract_pk is None or contract_pk == "null":
                 error_message = f"""The url has been messed up, please try again."""
                 raise ValidationError(error_message)
 
@@ -315,7 +318,7 @@ class ContractViewSet(ModelViewSet):
         # if (connected_user_department != cts.USER_MANAGEMENT) and (
         #     target_payment_due_str
         # ):
-        #     error_message = f"""Dear {self.request.user} only managers are 
+        #     error_message = f"""Dear {self.request.user} only managers are
         #         allowed to change payment due dates, pls check with the manager."""
         #     raise ValidationError(error_message)
         # check that status is changed only by Sales team (& Management)
@@ -335,16 +338,34 @@ class ContractViewSet(ModelViewSet):
 class EventViewSet(ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
-    permission_classes = [HasManagerRole, HasSalesRole, HasSupportRole]
+    # permission_classes = [HasSalesRole, HasSupportRole]
+    permission_classes = [HasSupportRole]
 
     def get_queryset(self):
-        # filter the url shown to employees depending on action/method
-        # self.action == 'list'
-        # if self.request.method not in cts.READ_METHODS:
-
-        client_pk = self.kwargs.get("clients_pk")
+        # check url client
+        client_pk = self.kwargs.get(
+            "clients_pk"
+        )  # client_pk when models Contract/Events
+        if client_pk is None or client_pk == "null":
+            error_message = (
+                f"""The client part of url has been messed up, please try again."""
+            )
+            raise ValidationError(error_message)
+        # check url contract
         contract_pk = self.kwargs.get("contracts_pk")
+        if contract_pk:
+            if contract_pk is None or contract_pk == "null":
+                error_message = f"""The contract part of url has been messed up, please try again."""
+                raise ValidationError(error_message)
+        # check url event
         event_pk = self.kwargs.get("pk")
+        if event_pk:
+            if event_pk is None or event_pk == "null":
+                error_message = (
+                    f"""The event part of url has been messed up, please try again."""
+                )
+                raise ValidationError(error_message)
+
         if client_pk and contract_pk and event_pk:
             self.queryset = Event.objects.filter(id=event_pk)
         elif contract_pk:
@@ -366,20 +387,33 @@ class EventViewSet(ModelViewSet):
 
 
         """
+
+        # check url client
+        client_pk = self.kwargs.get(
+            "clients_pk"
+        )  # client_pk when models Contract/Events
+        if client_pk is None or client_pk == "null":
+            error_message = (
+                f"""The client part of url has been messed up, please try again."""
+            )
+            raise ValidationError(error_message)
+        # check url contract
+        contract_pk = self.kwargs.get("contracts_pk")
+        if contract_pk:
+            if contract_pk is None or contract_pk == "null":
+                error_message = f"""The contract part of url has been messed up, please try again."""
+                raise ValidationError(error_message)
+        # check url event
+
         # check for mandatory fields in body of request
-        target_event_status = get_data_or_error(
-            self.request.data, "event_status", False
-        )
-        target_attendees = get_data_or_error(self.request.data, "attendees", False)
-        target_date_event = get_data_or_error(self.request.data, "date_event", False)
+        target_event_status = get_data_or_error(self.request.data, "event_status", True)
+        target_attendees = get_data_or_error(self.request.data, "attendees", True)
+        target_date_event = get_data_or_error(self.request.data, "date_event", True)
         target_support_contact_id = get_data_or_error(
             self.request.data, "support_contact", True
         )
         target_contract = get_data_or_error(self.request.data, "contract", True)
 
-        # check url & get current client
-        client_pk = self.kwargs.get("clients_pk")
-        contract_pk = self.kwargs.get("contract_pk")
         connected_user_department = User.objects.filter(id=self.request.user.id).values(
             "department"
         )[0]["department"]
@@ -391,13 +425,8 @@ class EventViewSet(ModelViewSet):
              need to be member of Sales, pls work on this with the sales team."""
             raise ValidationError(error_message)
 
-        # owasp : do not temper with client in the data
-        if not (int(client_id) == int(target_client_id)):
-            error_message = f"""you are not allowed to change the client {target_client_id},
-             pls go back and select: {client_id}"""
-            raise ValidationError(error_message)
         # owasp : do not temper with contract in the data
-        if contract_pk != target_contract.id:
+        if int(contract_pk) != target_contract:
             error_message = f"""you are not allowed to change the contract {target_contract},
              pls go back and select: {contract_pk}"""
             raise ValidationError(error_message)
@@ -414,7 +443,7 @@ class EventViewSet(ModelViewSet):
         contact_user_department = User.objects.filter(
             id=target_support_contact_id
         ).values("department")[0]["department"]
-        if contact_user_department != cts.SUPPORT_ENABLED_DEPARTMENT:
+        if contact_user_department not in cts.SUPPORT_ENABLED_DEPARTMENT:
             error_message = f"""The support contact shall belong to the support department, pls retry."""
             raise ValidationError(error_message)
 
@@ -461,12 +490,12 @@ class EventViewSet(ModelViewSet):
             raise ValidationError(error_message)
 
         # owasp : do not temper with client in the data
-        if not (int(client_id) == int(target_client_id)):
+        if not (int(client_pk) == int(target_client_id)):
             error_message = f"""you are not allowed to change the client {target_client_id},
              pls go back and select: {client_id}"""
             raise ValidationError(error_message)
         # owasp : do not temper with contract in the data
-        if contract_pk != target_contract.id:
+        if contract_pk != target_contract:
             error_message = f"""you are not allowed to change the contract {target_contract},
              pls go back and select: {contract_pk}"""
             raise ValidationError(error_message)
@@ -482,5 +511,5 @@ class EventViewSet(ModelViewSet):
 
         super().perform_create(serializer, *args, **kwargs)
         logger.info(
-            f"[{datetime.now()}]: Event.add {self.request.data} by {self.request.user}"
+            f"[{datetime.now()}]: Event.update {self.request.data} by {self.request.user}"
         )

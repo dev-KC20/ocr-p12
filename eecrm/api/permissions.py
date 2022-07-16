@@ -196,6 +196,6 @@ class HasSupportRole(BasePermission):
             if request.method in cts.EDIT_METHODS and isinstance(obj, Event):
                 # support person can only update own event
                 support_contact = obj.support_contact
-                if user_employee.id == support_contact:
+                if user_employee.id == support_contact.id:
                     return True
 

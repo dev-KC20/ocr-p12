@@ -207,7 +207,7 @@ LOGGING = {
     },
     "root": {
         "level": "DEBUG",
-        "handlers": ["console"],
+        "handlers": ["console", "development_logfile"],
     },
     "loggers": {
         "eecrm": {
