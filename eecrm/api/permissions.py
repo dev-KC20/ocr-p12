@@ -18,10 +18,7 @@ from .models import Client, Contract, Event
 #               10.GET /api/v1/clients/{id}/contracts/{id}
 #               13.GET /api/v1/clients/{id}/contracts/{id}/events/   1
 #               5.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  R	       |
-# |	Support	  |	3.GET /api/v1/clients/ 5.GET /api/v1/clients/{id}/
-#               8.GET /api/v1/clients/{id}/contracts/
-#               10.GET /api/v1/clients/{id}/contracts/{id}
-#               13.GET /api/v1/clients/{id}/contracts/{id}/events/   1
+# |	Support	  |	13.GET /api/v1/clients/{id}/contracts/{id}/events/   1
 #               5.GET /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  R	       |
 # |	Support	  |	16.PUT /api/v1/clients/{id}/contracts/{id}/events/{id}	|	  U own	    |
 # |	Mngnt	  |	admin	                                                |	CRUD /users	|
@@ -132,7 +129,7 @@ class HasSalesRole(BasePermission):
                         # sales colleagues can't create Contract, Event of another contact
                         return False
             elif request.method in cts.EDIT_DELETE_METHODS:
-                # to update or delete you shall be the contact
+                # to update or delete you shall be the contact but for events
                 if user_employee.id == sale_contact:
                     return True
                 else:
@@ -192,6 +189,7 @@ class HasSupportRole(BasePermission):
         if user_role == "A":
             # support person can't create anything
             if request.method in cts.EDIT_METHODS and isinstance(obj, Event):
+                return True
                 # support person can only update own event
                 support_contact = obj.support_contact
                 if user_employee.id == support_contact.id:

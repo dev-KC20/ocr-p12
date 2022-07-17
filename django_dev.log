@@ -1024,3 +1024,124 @@ NameError: name 'client_id' is not defined
 [2022-07-16 20:43:02] INFO [api.views.perform_create:104] [2022-07-16 20:43:02.294563]: Client.add {'password': '', 'username': 'topniceclient2', 'company_name': 'theneedle&dammagedone', 'sale_contact': 6, 'first_name': 'Paul', 'last_name': 'Simon2', 'email': 'ps2@song.org', 'company_phone': '+4458667688', 'company_mobile': '+4451165688'} by oc-salesman2
 [2022-07-16 20:43:02] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456
 [2022-07-16 20:43:02] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456
+[2022-07-17 13:50:43] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:50:43] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:50:49] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 13:50:55] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:50:55] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:50:55] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 13:50:55] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:14:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:14:19] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:14:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:14:22] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:16:21] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:16:28] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:16:28] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:16:28] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 401 183
+[2022-07-17 14:16:28] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 401 183
+[2022-07-17 14:16:34] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:16:34] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:16:47] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:16:47] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:16:47] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:16:47] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:23:35] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:23:35] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:23:35] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:23:35] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:29:57] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:29:57] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:30:01] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:30:01] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:30:23] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:30:29] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:30:29] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:30:29] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:30:29] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:30:47] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:30:47] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 14:30:50] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:30:50] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:35:03] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:35:03] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:35:07] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:35:11] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:35:11] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:35:11] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:35:11] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 14:40:59] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:40:59] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:41:02] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:41:02] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:41:09] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:41:13] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:41:13] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:41:13] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:41:13] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:41:47] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/
+[2022-07-17 14:41:47] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/
+[2022-07-17 14:41:47] WARNING [django.server.log_message:187] "POST /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 400 108
+[2022-07-17 14:41:47] WARNING [django.server.log_message:187] "POST /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 400 108
+[2022-07-17 14:41:57] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 200 287
+[2022-07-17 14:41:57] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 200 287
+[2022-07-17 14:42:12] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/null/
+[2022-07-17 14:42:12] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/null/
+[2022-07-17 14:42:12] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/null/ HTTP/1.1" 400 63
+[2022-07-17 14:42:12] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/null/ HTTP/1.1" 400 63
+[2022-07-17 14:44:37] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:44:37] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:44:45] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:44:45] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:44:45] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 109
+[2022-07-17 14:44:45] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 109
+[2022-07-17 14:44:57] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:44:57] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 14:45:01] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:45:01] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:45:01] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:45:01] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:46:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:46:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:46:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:46:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 92
+[2022-07-17 14:49:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:49:09] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:50:46] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:50:46] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:51:02] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:51:43] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:51:43] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:51:57] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:51:57] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:51:57] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:52:05] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:52:05] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:52:05] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 86
+[2022-07-17 14:52:05] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 86
+[2022-07-17 14:54:26] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:54:26] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 14:56:19] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:56:19] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:56:20] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:58:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\base\constants.py changed, reloading.
+[2022-07-17 14:58:08] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\base\constants.py changed, reloading.
+[2022-07-17 14:59:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:59:13] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 14:59:13] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 14:59:24] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:59:24] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 14:59:24] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 79
+[2022-07-17 14:59:24] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 79
+[2022-07-17 15:00:07] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 15:00:07] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 15:00:07] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 47
+[2022-07-17 15:00:07] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 400 47
+[2022-07-17 15:00:56] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 15:00:56] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\views.py changed, reloading.
+[2022-07-17 15:01:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 15:01:06] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 15:01:06] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 15:01:14] INFO [api.views.perform_update:507] [2022-07-17 15:01:14.070583]: Event.update {'event_status': 'E', 'attendees': 500, 'date_event': '2023-10-05T13:51:59.486246+02:00', 'support_contact': 7, 'contract': 5, 'id': 4} by oc-supporttech
+[2022-07-17 15:01:14] INFO [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 200 235
+[2022-07-17 15:01:14] INFO [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 200 235

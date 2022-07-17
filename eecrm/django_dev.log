@@ -1,0 +1,74 @@
+[2022-07-17 12:27:58] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 12:27:58] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 12:27:59] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 12:28:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 12:28:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 12:29:32] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-17 12:29:32] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-17 12:29:32] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-17 12:29:32] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 58
+[2022-07-17 12:29:39] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-17 12:29:39] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/
+[2022-07-17 12:29:39] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 75
+[2022-07-17 12:29:39] WARNING [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 400 75
+[2022-07-17 12:30:24] INFO [api.views.perform_create:102] [2022-07-17 12:30:24.212850]: Client.add {'password': '', 'username': 'topniceclient3', 'company_name': 'theneedle&dammagedone', 'sale_contact': 5, 'first_name': 'Paul', 'last_name': 'Simon2', 'email': 'ps2@song.org', 'company_phone': '+4458667688', 'company_mobile': '+4451165688'} by oc-salesman
+[2022-07-17 12:30:24] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456
+[2022-07-17 12:30:24] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 456
+[2022-07-17 12:32:15] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 3212
+[2022-07-17 12:32:15] INFO [django.server.log_message:187] "GET /api/v1/clients/ HTTP/1.1" 200 3212
+[2022-07-17 12:34:02] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/17/
+[2022-07-17 12:34:02] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/17/
+[2022-07-17 12:34:02] WARNING [django.server.log_message:187] "PUT /api/v1/clients/17/ HTTP/1.1" 400 58
+[2022-07-17 12:34:02] WARNING [django.server.log_message:187] "PUT /api/v1/clients/17/ HTTP/1.1" 400 58
+[2022-07-17 12:34:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/17/
+[2022-07-17 12:34:21] WARNING [django.request.log_response:241] Bad Request: /api/v1/clients/17/
+[2022-07-17 12:34:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/17/ HTTP/1.1" 400 92
+[2022-07-17 12:34:21] WARNING [django.server.log_message:187] "PUT /api/v1/clients/17/ HTTP/1.1" 400 92
+[2022-07-17 12:36:43] INFO [api.views.perform_create:102] [2022-07-17 12:36:43.605432]: Client.add {'password': '', 'username': 'topniceclient4', 'company_name': 'theneedle&dammagedone', 'sale_contact': 5, 'first_name': 'Paul', 'last_name': 'Simon2', 'email': 'ps2@song.org', 'company_phone': '+4458667688', 'company_mobile': '+4451165688', 'is_prospect': False} by oc-salesman
+[2022-07-17 12:36:43] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 457
+[2022-07-17 12:36:43] INFO [django.server.log_message:187] "POST /api/v1/clients/ HTTP/1.1" 201 457
+[2022-07-17 12:40:02] INFO [api.views.perform_create:254] [2022-07-17 12:40:02.804400]: Contract.add {'contract_name': 'Nice Contract', 'contract_amount': 81000.53, 'payment_due': '2023-07-04T22:36:34.501343+02:00', 'sale_contact': 5, 'client': 18} by oc-salesman
+[2022-07-17 12:40:02] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 260
+[2022-07-17 12:40:02] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 260
+[2022-07-17 12:40:38] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/3/events/ HTTP/1.1" 200 52
+[2022-07-17 12:40:38] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/3/events/ HTTP/1.1" 200 52
+[2022-07-17 12:40:57] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/ HTTP/1.1" 200 312
+[2022-07-17 12:40:57] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/ HTTP/1.1" 200 312
+[2022-07-17 12:41:39] INFO [api.views.perform_create:254] [2022-07-17 12:41:39.591192]: Contract.add {'contract_name': 'Nice Contract2', 'contract_amount': 500.53, 'payment_due': '2025-07-04T22:36:34.501343+02:00', 'sale_contact': 5, 'client': 18} by oc-salesman
+[2022-07-17 12:41:39] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 259
+[2022-07-17 12:41:39] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 259
+[2022-07-17 12:41:58] INFO [api.views.perform_create:254] [2022-07-17 12:41:58.898513]: Contract.add {'contract_name': 'Nice Contract3', 'contract_amount': 5.53, 'payment_due': '2022-07-04T22:36:34.501343+02:00', 'sale_contact': 5, 'client': 18} by oc-salesman
+[2022-07-17 12:41:58] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 257
+[2022-07-17 12:41:58] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/ HTTP/1.1" 201 257
+[2022-07-17 12:42:11] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/ HTTP/1.1" 200 830
+[2022-07-17 12:42:11] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/ HTTP/1.1" 200 830
+[2022-07-17 12:42:22] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/?min_payment_due=2023-09-03&max_payment_due=2024-08-03 HTTP/1.1" 200 52
+[2022-07-17 12:42:22] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/?min_payment_due=2023-09-03&max_payment_due=2024-08-03 HTTP/1.1" 200 52
+[2022-07-17 12:43:20] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/?min_payment_due=2024-09-03&max_payment_due=2026-08-03 HTTP/1.1" 200 311
+[2022-07-17 12:43:20] INFO [django.server.log_message:187] "GET /api/v1/clients/18/contracts/?min_payment_due=2024-09-03&max_payment_due=2026-08-03 HTTP/1.1" 200 311
+[2022-07-17 12:45:29] INFO [api.views.perform_create:450] [2022-07-17 12:45:29.210185]: Event.add {'event_status': 'C', 'attendees': 500, 'date_event': '2023-10-05T13:51:59.486246+02:00', 'support_contact': 7, 'contract': 5} by oc-salesman
+[2022-07-17 12:45:29] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 201 235
+[2022-07-17 12:45:29] INFO [django.server.log_message:187] "POST /api/v1/clients/18/contracts/5/events/ HTTP/1.1" 201 235
+[2022-07-17 13:42:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:42:18] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:42:18] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 13:44:30] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:44:30] WARNING [django.request.log_response:241] Unauthorized: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:44:30] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 401 183
+[2022-07-17 13:44:30] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 401 183
+[2022-07-17 13:44:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 13:44:59] INFO [django.server.log_message:187] "POST /api/v1/ HTTP/1.1" 200 483
+[2022-07-17 13:45:41] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:45:41] WARNING [django.request.log_response:241] Forbidden: /api/v1/clients/18/contracts/5/events/4/
+[2022-07-17 13:45:41] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 13:45:41] WARNING [django.server.log_message:187] "PUT /api/v1/clients/18/contracts/5/events/4/ HTTP/1.1" 403 63
+[2022-07-17 13:49:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 13:49:23] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 13:49:24] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:49:24] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:49:25] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *
+[2022-07-17 13:49:28] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 13:49:28] INFO [django.utils.autoreload.trigger_reload:266] C:\Local\dev\python\ocr\ocr-p12\eecrm\api\permissions.py changed, reloading.
+[2022-07-17 13:49:29] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:49:29] INFO [django.utils.autoreload.run_with_reloader:677] Watching for file changes with StatReloader
+[2022-07-17 13:49:29] INFO [api.views.<module>:17] * ***  Hello, it all starts here *** *

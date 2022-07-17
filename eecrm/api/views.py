@@ -334,7 +334,7 @@ class EventViewSet(ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     # permission_classes = [HasSalesRole, HasSupportRole]
-    permission_classes = [HasSalesRole, HasSupportRole]
+    permission_classes = [HasSalesRole|HasSupportRole]
 
     def get_queryset(self):
         # check url client
@@ -465,7 +465,7 @@ class EventViewSet(ModelViewSet):
         """
         # check for mandatory fields in body of request
         target_event_status = get_data_or_error(
-            self.request.data, "event_status", False
+            self.request.data, "event_status", True
         )
         get_data_or_error(self.request.data, "attendees", False)
         get_data_or_error(self.request.data, "date_event", False)
@@ -476,7 +476,7 @@ class EventViewSet(ModelViewSet):
 
         # check url & get current client
         # client_pk = self.kwargs.get("clients_pk")
-        contract_pk = self.kwargs.get("contract_pk")
+        contract_pk = self.kwargs.get("contracts_pk")
         connected_user_department = User.objects.filter(id=self.request.user.id).values(
             "department"
         )[0]["department"]
@@ -489,19 +489,19 @@ class EventViewSet(ModelViewSet):
             raise ValidationError(error_message)
 
         # owasp : do not temper with contract in the data
-        if contract_pk != target_contract:
+        if int(contract_pk) != target_contract:
             error_message = f"""you are not allowed to change the contract {target_contract},
              pls go back and select: {contract_pk}"""
             raise ValidationError(error_message)
         # check event_status is allowed
-        if target_event_status not in cts.EVENT_PROGRESS_STATUS:
+        if target_event_status not in cts.EVENT_STATUS:
             error_message = f"""When updating an event, the satus can only be {cts.EVENT_OPEN},{cts.EVENT_WIP} or {cts.EVENT_CLOSED},
              pls correct."""
             raise ValidationError(error_message)
-        # check support_contact mandatory
-        if target_support_contact_id:
-            error_message = f"""You {self.request.user} cannot change the support contact, pls remove the field."""
-            raise ValidationError(error_message)
+        # # check support_contact mandatory
+        # if target_support_contact_id:
+        #     error_message = f"""You {self.request.user} cannot change the support contact, pls remove the field."""
+        #     raise ValidationError(error_message)
 
         super().perform_create(serializer, *args, **kwargs)
         logger.info(
