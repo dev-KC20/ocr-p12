@@ -52,23 +52,23 @@ You will find here guidance and a brief introduction on how to install and use o
 
 In order to install and use locally the Epic Events CRM back-end API server, assuming you have Python 3 instyalled, open bash prompt: 
 
-1.  clone the ocr-p12 directory into your local copy.
-    `git clone https://github.com/dev-KC20/ocr-p12.git  
+1.  clone the ocr-p12 directory into your local copy.  
+    `git clone https://github.com/dev-KC20/ocr-p12.git`   
   
 2.  move to the working directory   
-    `cd ocr-p12  
+    `cd ocr-p12`   
   
 3. create a python virtual environment named ENV  
-    `python -m venv ENV  
+    `python -m venv ENV`   
   
 4.  do not forget to active the ENV virtual environment  
-    `ENV\scripts\activate.bat  
+    `ENV\scripts\activate.bat`   
 
 5.  install all the requirments,  
-    `pip install -r requirements-dev.txt 
+    `pip install -r requirements-dev.txt`   
 
-6.  move into the source directory,
-    `cd eecrm     
+6.  move into the source directory,  
+    `cd eecrm`       
   
 7.  create a .env file in order to keep all secrets local and safe (see hereunder for details),  
      ``` 
@@ -87,11 +87,11 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
      ``` 
   
 8.  download PostgreSQL database from [PostgreSQL: Downloads](https://www.postgresql.org/download/) and follow their instructions.  
-9. 
+   
     You will have to provide an account and password for PostgreSQL root user.  
     Our team uses psql in version 14 and also installed the full SQL admin studio 'pgAdmin 4'  
   
-10. open the psql shell provided with at step 8. and connect to the database  
+9.  open the psql shell provided with at step 8. and connect to the database  
 ```  
             psql  
             Server [localhost]:  
@@ -101,7 +101,7 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
             Mot de passe pour l'utilisateur PostgreSQL root user :  
 ```  
 11. create a dedicated database for the Epic Events CRM,  
-```sh  
+```sql  
             CREATE DATABASE eecrm  
                 WITH  
                 OWNER = "PostgreSQL root user"  
@@ -119,18 +119,18 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
      
       
 12. back to the python prompt, build and run Django models migration    
-    `python manage.py makemigrations   
-    `python manage.py migrate  
+    `python manage.py makemigrations`     
+    `python manage.py migrate`    
     
 13. create a Django superuser  
-    `python manage.py createsuperuser  
+    `python manage.py createsuperuser`     
     Username: ADMIN_ID  
     Email address: adminoc@mail.fr  
     Password: ADMIN_PASSWORD  
     Password (again):  
 
 14. Eventually run the server  
-    `python manage.py runserver   
+    `python manage.py runserver`      
    
   
 ## Security and privacy  
@@ -141,14 +141,14 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
     First of all, we introduced the segregation of duties in how our staff is interacting with your data. Only the manager level has full access whereas salesmen only work on prospection and contract and the support team only care about the events we organize.  
   
   
-    |dep./object  |	User      |  Customer | Contract |	Event    |  
-    |-------------|-----------|-----------|----------|-----------|  
-    |anonymous    |	forbidden |	forbidden | forbidden|	forbidden|  
-    |sales_team   |		      |  [CR]UDL  |    RL    |  RL       |  
-    |sales_contact|		      |   inherit |own [CR]UD|	own [CR] |  
-    |support_team |		      |    RL	  |    RL	 |    RL     |  
-    |supp_contact |			  |     	  |          |   own UD  |  
-    |managmnt_team|	  CRUDL   |	  CRUDL	  |  CRUDL	 |  CRUDL    |  
+    ` |dep./object  |	User      |  Customer | Contract |	Event    |`    
+    ` |-------------|-------------|-----------|----------|-----------|`    
+    ` |anonymous    |	forbidden |	forbidden | forbidden|	forbidden|`    
+    ` |sales_team   |		      |  [CR]UDL  |    RL    |  RL       |`    
+    ` |sales_contact|		      |   inherit |own [CR]UD|	own [CR] |`    
+    ` |support_team |		      |    RL	  |    RL	 |    RL     |`    
+    ` |supp_contact |			  |     	  |          |   own UD  |`    
+    ` |managmnt_team|	  CRUDL   |	  CRUDL	  |  CRUDL	 |  CRUDL    |`    
   
     For instance, creating user or clients cannot be done thru our exposed back-end API server but need to use a dedicated Admin front-end whose access is strongly restricted.  
       
@@ -206,7 +206,8 @@ The permissions are granted following the user's role in the workflow:
 4. Only Sales creates from Client, Contract, Event
 5. Only Support updates the Event
 
-Authentication is managed in the has_permission method of the permission class as well as with jwt tokens.
+Authentication is managed with Django auth `django.contrib.auth` as well as with ` simple-jwt`  tokens.
+Authorization is managed thru the ` has_permission`  method of the permission class 
 
 If you need mock user data for the above role segragation, here is what we suggest:
 
@@ -235,12 +236,15 @@ For the latter, remember when checking User permissions that "admin-oc" is also 
 
 Openclassrooms and even more the DA Python discord gals & guys!
 
-Offical [Django](https://docs.djangoproject.com/fr/4.0/topics/security/#sql-injection-protection), [DRF(https://www.django-rest-framework.org/)] et [pytest](https://docs.pytest.org/en/7.1.x/) documentation!  
+Offical [Django](https://docs.djangoproject.com/fr/4.0/topics/security/#sql-injection-protection), [DRF](https://www.django-rest-framework.org/) et [pytest](https://docs.pytest.org/en/7.1.x/) documentation!  
   
 On owasp and Django, 
 [Django vs. the OWASP Top 10 - Part 1](https://blog.nvisium.com/django-vs-the-owasp-top-10-part-1)  
+and [10 tips for making the Django Admin more secure | Opensource.com](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
+where  Jeff Triplett & Lacey Williams Henschel recommend to change the default admin URL from `/admin/` to something else.
+
   
-Nicely written and opiniated post on [PyTest with Django REST Framework: From Zero to Hero - DEV Community](https://dev.to/sherlockcodes/pytest-with-django-rest-framework-from-zero-to-hero-8c4) 
+Nicely written and opiniated post on    [PyTest with Django REST Framework: From Zero to Hero - DEV Community](https://dev.to/sherlockcodes/pytest-with-django-rest-framework-from-zero-to-hero-8c4) 
 kudos @LucasMiguel aka https://dev.to/sherlockcodes  
   
 For his clear review of django's permissions, thx @Oluwole Majiyagbe
@@ -252,12 +256,12 @@ One more on permissions which saved me hours is @marcuslind90 with
 [How to restrict access with Django Permissions · Coderbook](https://coderbook.com/@marcus/how-to-restrict-access-with-django-permissions/)   
   
   
-it has been my battle to find out how to test with a PostgreSQL database thx here @George Leslie-Waksman for
+it has been a battle to find out how to test with a PostgreSQL database thx here @George Leslie-Waksman for
 [Better PostgreSQL testing with Python: announcing pytest-pgsql and pgmock | by George Leslie-Waksman | Clover Health](https://technology.cloverhealth.com/better-postgresql-testing-with-python-announcing-pytest-pgsql-and-pgmock-d0c569d0602a)  
   
 on Logging, thx @ Malik Albeik for [Monitoring user actions with LogEntry in Django Admin | Malik Albeik](https://malikalbeik.com/blog/monitoring-user-actions-with-logentry-in-django-ad)  
   
-The REal Python not only runs a great podcast but also teaches well, here a review on Django Admin [What You Need to Know to Manage Users in Django Admin – Real Python](https://realpython.com/manage-users-in-django-admin/)  
+The Real Python not only runs a great podcast but also teaches well, here a review on Django Admin [What You Need to Know to Manage Users in Django Admin – Real Python](https://realpython.com/manage-users-in-django-admin/)  
 
 
 ## PEP 8 check
