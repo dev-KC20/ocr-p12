@@ -7,6 +7,7 @@
 
 - Table of Content
   - [Disclaimer](#disclaimer)
+  - [Introduction](#introduction)
   - [Quick Start](#quick-start)
   - [Security and Privacy](#security-and-privacy)
   - [Epic Events API documentation](#Epic-Events-API-documentation)
@@ -30,18 +31,19 @@ The additionnal code follows "CC BY-SA ".
 
 ---
 
-## Epic Events API documentation
-
-### Introduction
+## Introduction
 
 Epic Events does host the funniest and greatest parties in this quarter of the Universe. We manage the full event to ease all the tedious preparation work for our Very Important Clients!
 
-Our I.T department has just improved and secured our internal CRM to support our Customer's and our own business.
+For Managing its Customer Relations, Epic Events uses an internal CRM solution which allows to create & deal with Users, Clients, Contracts and follow Events.
+
+
+Our I.T department has just improved and secured the internal CRM solution to better support our Customer's and our own business.
 For our partners to develop mobile front-end applications as well as for our own staff, we release our API Rest server.
 
 You will find here guidance and a brief introduction on how to install and use our secured API server.
 
-**Have fun, Dev!**
+**Have fun, Devs!**
 
 
 
@@ -147,7 +149,6 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
     |support_team |		      |    RL	  |    RL	 |    RL     |  
     |supp_contact |			  |     	  |          |   own UD  |  
     |managmnt_team|	  CRUDL   |	  CRUDL	  |  CRUDL	 |  CRUDL    |  
-    |is_staff     |	          |	    RL	  |    RL	 |    RL     |  
   
     For instance, creating user or clients cannot be done thru our exposed back-end API server but need to use a dedicated Admin front-end whose access is strongly restricted.  
       
@@ -158,26 +159,67 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
     Finally the code itself is secured by reducing the exposure of secrets to public repositories,   
 
 
-### Gestion des secrets  
+### Secret's management
 
-Django utilise un "secret" pour générer ses certificats et recommande de garder cette clé secrète. 
-Nous utilisons le paquet python-decouple pour remplacer les clés de secret par leur valeur dans le fichier settings.py :
-Le fait de stocker les secrets dans un fichier .env évite de le "committer" par accident sur un dépôt centralisé grâce au paramétrage de notre .gitignore.
+    Django use "secret" to generate its certificates and advises to keep this key secret.
+    Epinc Events uses the python-decouplemodule to replace the secret key's values of the settings.py file by their decouple link :
+    Storing actual secret in a .env file make its possible to keep them local provided one does exclude the .env file from the commits by regitering it in .gitignore.  
+  
+    For learners we, for ones allowed the commit of this (fake) .env file.  
 
-S'agissant ici d'un exercice pédagogique, nous voulons permettre d'utiliser notre code source et éventuelles données tout en respectant les bonnes pratiques. C'est pourquoi nous autorisons exceptionnellement le commit du fichier .env.
+    ```py
+    from decouple import config
+    ...
+    SECRET_KEY = config("SECRET_KEY")
 
-```py
-from decouple import config
-...
-SECRET_KEY = config("SECRET_KEY")
-
-```  
+    ```  
 
 ## Epic Events API documentation
 
+
+Postman documentation link [epicevents_ap](https://documenter.getpostman.com/view/19150435/UzQvt51y)
+
 ![](img/p12-end-points.png)  
 
-Postman documentation
+### Business workflow
+
+We could suggest the following workflow to support an event:
+
+1. Sales adds the new prospect. 
+2. Sales updates the prospect status of becoming a true client
+3. Sales create a new Contract 
+4. Sales updates the status of Contract when the client has signed
+5. Sales creates a new Event and allocates it to the support staff
+6. Support gets details of the newly allocated event
+7. Support updates the event status from Open to Close
+8. Management Create, Read, Update or Delete users when required to.
+
+The application structure includes basically 3 levels of embedded models : Clients, Contracts, Events.
+
+For these, the basic CRUD methods are provided thru the available end-points.
+
+The permissions are granted following the user's role in the workflow:
+
+1. Only authenticated user can acces end-points.
+2. Only staff can access the admin site.
+3. Only Superuser can create a superuser
+4. Only Sales creates from Client, Contract, Event
+5. Only Support updates the Event
+
+Authentication is managed in the has_permission method of the permission class as well as with jwt tokens.
+
+If you need mock user data for the above role segragation, here is what we suggest:
+
+![](img/p12-sample-data.png)  
+  
+(A) Support ; (M) Management ; (S) Sales.
+
+Two front ends app are needed for the workflow:
+* the provided (and hidden) Django Admin
+* the Postman client side.
+
+For the latter, remember when checking User permissions that "admin-oc" is also the Epic Events API superuser.
+
 
 ## Tests passed  
 
