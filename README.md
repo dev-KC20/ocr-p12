@@ -135,26 +135,33 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
   
 ## Security and privacy  
     
-    Epic Events and its co-workers do take your privacy and your data safety very seriously. Out IT team has set several security measures to ensure nothing bad may happen to your data.  
-    Epic Events publishes a developper technical guide which requires to protect our solutions against top 10 "owasp" security threats (see also the "credits and good reads" section).  
+    Epic Events and its co-workers do take your privacy and your data safety very seriously. 
+    Our IT team has set several security measures to ensure nothing bad may happen to your data.  
+    Epic Events publishes a developper technical guide which requires to protect our solutions 
+    against top 10 "owasp" security threats (see also the "credits and good reads" section).  
   
-    First of all, we introduced the segregation of duties in how our staff is interacting with your data. Only the manager level has full access whereas salesmen only work on prospection and contract and the support team only care about the events we organize.  
+    First of all, we introduced the segregation of duties in how our staff is interacting with your data.  
+    Only the manager level has full access whereas salesmen only work on prospection and 
+    contract and the support team only care about the events we organize.  
+ 
   
+|dep./object  |	User      |  Customer | Contract |	Event    |    
+|-------------|-----------|-----------|----------|-----------|    
+|anonymous    |	forbidden |	forbidden | forbidden|	forbidden|    
+|sales_team   |		      |  [CR]UDL  |    RL    |  RL       |    
+|sales_contact|		      |   inherit |own [CR]UD|	own [CR] |    
+|support_team |		      |    RL	  |    RL	 |    RL     |    
+|supp_contact |			  |     	  |          |   own UD  |    
+|managmnt_team|	  CRUDL   |	  CRUDL	  |  CRUDL	 |  CRUDL    |    
   
-    ` |dep./object  |	User      |  Customer | Contract |	Event    |`    
-    ` |-------------|-------------|-----------|----------|-----------|`    
-    ` |anonymous    |	forbidden |	forbidden | forbidden|	forbidden|`    
-    ` |sales_team   |		      |  [CR]UDL  |    RL    |  RL       |`    
-    ` |sales_contact|		      |   inherit |own [CR]UD|	own [CR] |`    
-    ` |support_team |		      |    RL	  |    RL	 |    RL     |`    
-    ` |supp_contact |			  |     	  |          |   own UD  |`    
-    ` |managmnt_team|	  CRUDL   |	  CRUDL	  |  CRUDL	 |  CRUDL    |`    
-  
-    For instance, creating user or clients cannot be done thru our exposed back-end API server but need to use a dedicated Admin front-end whose access is strongly restricted.  
+    For instance, creating user or clients cannot be done thru our exposed back-end API server
+     but need to use a dedicated Admin front-end whose access is strongly restricted.  
       
-    On the exposed back-end API server side, we ensure that front-end clients don't temper with the url or the json request body they send to the server.  
+    On the exposed back-end API server side, we ensure that front-end clients don't temper 
+    with the url or the json request body they send to the server.  
   
-    All technical operations are logged and help us to prevent and identify any mis-behavior or attacks
+    All technical operations are logged and help us to prevent and identify any mis-behavior 
+    or attacks
 
     Finally the code itself is secured by reducing the exposure of secrets to public repositories,   
 
@@ -162,8 +169,10 @@ In order to install and use locally the Epic Events CRM back-end API server, ass
 ### Secret's management
 
     Django use "secret" to generate its certificates and advises to keep this key secret.
-    Epinc Events uses the python-decouplemodule to replace the secret key's values of the settings.py file by their decouple link :
-    Storing actual secret in a .env file make its possible to keep them local provided one does exclude the .env file from the commits by regitering it in .gitignore.  
+    Epinc Events uses the python-decouplemodule to replace the secret key's values of the 
+    settings.py file by their decouple link :
+    Storing actual secret in a .env file make its possible to keep them local provided one 
+    does exclude the .env file from the commits by regitering it in .gitignore.  
   
     For learners we, for ones allowed the commit of this (fake) .env file.  
 
@@ -219,7 +228,8 @@ Two front ends app are needed for the workflow:
 * the provided (and hidden) Django Admin
 * the Postman client side.
 
-For the latter, remember when checking User permissions that "admin-oc" is also the Epic Events API superuser.
+For the latter, remember when checking User permissions that "admin-oc" is also 
+the Epic Events API superuser.
 
 
 ## Tests passed  
